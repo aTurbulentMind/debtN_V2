@@ -1,0 +1,26 @@
+//colors
+:root{
+    --text_Main: hsl(220, 82%, 2%);
+    --text_Alt:hsl(240, 49%, 87%);
+
+    --back_Main:hsl(60, 60%, 99%);
+    --back_Alt:hsl(218, 84%, 33%);
+    --back_Tre:hsla(218, 84%, 15%);
+    --back_Hallow:hsla(218, 84%, 15%, 0.75);
+
+    --extra:hsl(218, 84%, 25%);
+    --error:hsl(342, 76%, 36%);
+    --grabber:hsl(101, 55%, 44%);
+    --highlight:hsl(48, 83%, 60%);
+}
+
+/*
+--gradient:linear-gradient(hsl(240, 60%, 1%), hsl(207, 95%, 7%), hsl(208, 94%, 13%));
+$gradientFlip:linear-gradient(0deg, hsl(34, 100%, 1%), hsl(38, 100%, 6%), hsl(137, 97%, 11%));
+
+//color palette// theme colors
+$primary: $highlight !default;
+$secondary: $backTre !default;
+$info:$grabber !default;
+
+*/
