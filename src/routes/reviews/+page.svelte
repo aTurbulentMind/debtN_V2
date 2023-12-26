@@ -95,6 +95,13 @@
 
 <!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
+	h1 {
+		padding: 10vh 0 5vh 6vw;
+		width: fit-content;
+		position: flex;
+		font-size: var(--f_lg);
+	}
+
 	.grid {
 		.card {
 			svg {

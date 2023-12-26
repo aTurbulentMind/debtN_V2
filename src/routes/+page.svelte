@@ -159,7 +159,7 @@
 		background-position: center;
 		background-size: cover;
 		z-index: 990;
-		height: 110vh;
+		height: 100vh;
 		width: 100vw;
 
 		h1 {
@@ -172,48 +172,51 @@
 
 		p {
 			position: absolute;
-			top: 35vh;
+			top: 25vh;
 			left: 5vw;
+			width: 90vw;
 			font-size: var(--font);
 		}
 
 		form {
 			position: absolute;
-			top: 40vh;
-			right: 4vw;
-			width: 40vw;
-			height: 55vh;
+			top: 45vh;
+			left: 5vw;
+			width: 90vw;
+			height: 50vh;
 
 			h2 {
-				font-size: var(--f_xl);
+				font-size: var(--f_m);
 			}
 
 			p {
 				position: relative;
-				top: 6vh;
+				top: 1vh;
 				left: 0.01vw;
-				margin-top: 2vh;
+				margin-top: 4.5vh;
 			}
 
 			input {
 				position: absolute;
-				right: 5vw;
-				width: 15vw;
-				height: 4vh;
-				font-size: var(--f_lg);
+				right: 7vw;
+				width: 55vw;
+				height: 3vh;
+				font-size: var(--font);
+				margin-top: 3vh;
 			}
 
 			.text_Message {
-				margin-top: -6vh;
+				margin-top: -3vh;
 			}
 
 			button {
 				position: absolute;
 				background: var(--highlight);
-				width: 10vw;
-				bottom: 5vh;
-				left: 15vw;
-				font-size: var(--f_xl);
+				width: fit-content;
+				padding: 1%;
+				bottom: 4vh;
+				left: 35vw;
+				font-size: var(--f_m);
 				border-radius: var(--rad);
 				font-weight: 700;
 
@@ -227,19 +230,17 @@
 		}
 	}
 
-	.alt_Color {
-		padding: 10vh 0;
-		background-color: var(--extra);
-		color: var(--back_Main);
+	h1 {
+		padding: 8vh 0 5vh 6vw;
+		width: fit-content;
+		position: flex;
+		font-size: var(--f_lg);
 	}
 
 	.grid {
-		margin: 5vh auto;
-
-		svg {
-			width: 25%;
-			margin: 10% 35%;
-		}
+		grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+		gap: 15px;
+		margin: 5vh 5vw;
 
 		.card {
 			margin: 5vh auto;
@@ -255,14 +256,28 @@
 		}
 	}
 
+	.alt_Color {
+		padding: 10vh 0;
+		background-color: var(--extra);
+		color: var(--back_Main);
+	}
+
+	.overLay {
+		margin-top: -100vh;
+
+		a {
+			font-size: var(--f_lg);
+			margin-bottom: 20vh;
+		}
+	}
+
 	@media only screen and (min-width: 740px) {
 		h1 {
 			padding: 18vh 0 5vh 46vw;
-			width: fit-content;
-			position: flex;
 		}
 
 		.hero {
+			height: 110vh;
 			h1 {
 				position: absolute;
 				left: 1vw;
@@ -300,36 +315,56 @@
 		}
 	}
 
-	.overLay {
-		margin-top: -100vh;
-
-		a {
-			font-size: var(--f_lg);
-			margin-bottom: 20vh;
-		}
-	}
-
 	@media only screen and (min-width: 980px) {
 		.hero {
+			display: flex;
 			height: 100vh;
 
 			h1 {
+				position: absolute;
 				left: 10vw;
 				font-size: var(--f_xxl);
 			}
 
 			p {
+				position: absolute;
 				left: 10vw;
 				width: 40vw;
 				font-size: var(--f_xl);
 			}
 
-			a {
-				position: relative;
-				color: var(--back_Main);
-				top: 70vh;
-				left: 30vw;
-				font-size: var(--f_xl);
+			form {
+				top: 40vh;
+				margin-left: 50vw;
+				width: 40vw;
+				height: 55vh;
+
+				h2 {
+					font-size: var(--f_xl);
+				}
+
+				p {
+					top: 6vh;
+					margin-top: 2vh;
+				}
+
+				input {
+					right: 5vw;
+					width: 15vw;
+					height: 4vh;
+					font-size: var(--f_lg);
+				}
+
+				.text_Message {
+					margin-top: -6vh;
+				}
+
+				button {
+					width: 10vw;
+					bottom: 5vh;
+					left: 15vw;
+					font-size: var(--f_xl);
+				}
 			}
 		}
 

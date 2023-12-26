@@ -110,10 +110,48 @@
 
 <!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
+	h1 {
+		padding: 10vh 0 5vh 6vw;
+		width: fit-content;
+		position: flex;
+		font-size: var(--f_lg);
+	}
+
+	h3 {
+		padding: 10vh 0 5vh 15vw;
+	}
+
 	.img_Gap {
 		img {
 			width: 60%;
 			margin: 0 20%;
+		}
+	}
+
+	.grid {
+		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+		grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+		gap: 5px;
+		border-radius: var(--rad);
+		position: relative;
+		margin-bottom: 20vh;
+
+		.card {
+			margin: 25px 10px;
+			box-shadow: none;
+
+			svg {
+				width: 7vw;
+				height: 7vh;
+				margin: 1vh 10vw;
+
+				text-align: center;
+			}
+
+			.card-title {
+				font-size: var(--font);
+				text-align: center;
+			}
 		}
 	}
 
@@ -129,7 +167,6 @@
 			grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
 			gap: var(--pad_xl);
 			border: var(--bord);
-			border-radius: var(--rad);
 			position: relative;
 			margin-bottom: 20vh;
 
@@ -155,9 +192,13 @@
 			z-index: 901;
 			border-radius: var(--rad);
 			border: var(--bord);
-			padding: var(--pad);
 			width: fit-content;
 			position: relative;
+
+			h3 {
+				padding: var(--pad);
+				font-size: var(--f_lg);
+			}
 		}
 	}
 </style>

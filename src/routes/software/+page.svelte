@@ -442,8 +442,7 @@
 
 <h3>Comparison</h3>
 
-<!-- Server Requirements Table -->
-<table class="requirements-table">
+<table class="requirements-table compari">
 	<thead>
 		<tr>
 			<th>Features</th>
@@ -516,13 +515,13 @@
 	h1,
 	h3 {
 		width: fit-content;
-		position: flex;
-		padding: 18vh 0 5vh 46vw;
+		padding: 10vh 0 10vh 15vw;
 	}
 
 	.img_container {
-		display: flex;
+		display: relative;
 		justify-content: space-around;
+		margin: 1vh 2.5vw;
 
 		.img_Left,
 		.img_Right {
@@ -532,6 +531,10 @@
 		button {
 			border-radius: var(--rad);
 			cursor: pointer;
+
+			img {
+				width: 60vw;
+			}
 
 			p {
 				font-size: var(--f_m);
@@ -549,6 +552,7 @@
 			transform: scale(0.6);
 			background-color: var(--back_Tre);
 			color: var(--back_Main);
+			margin: 5vh 15vw;
 
 			p,
 			.text_Box {
@@ -563,7 +567,8 @@
 
 	.add-ons {
 		list-style-type: none;
-		width: 50vw;
+		width: 90vw;
+		margin: 2vw 5vw;
 
 		.pwrSelected,
 		.selected {
@@ -581,11 +586,12 @@
 			cursor: pointer;
 			width: fit-content;
 			padding: 1%;
+			margin: 2vh auto;
 
 			p {
-				font-size: var(--f_m);
+				font-size: var(--font);
 				padding: 2%;
-				margin: 0 8vw;
+				margin: 0 5vw;
 				cursor: default;
 			}
 		}
@@ -598,7 +604,7 @@
 	.requirements-table {
 		width: 50vw;
 		border-collapse: collapse;
-		margin: 10vh 25vw;
+		margin: 5vh 0;
 
 		caption {
 			font-weight: bold;
@@ -629,7 +635,18 @@
 		}
 	}
 
+	.compari {
+		margin: 5vh auto;
+	}
+
 	@media only screen and (min-width: 980px) {
+		h1,
+		h3 {
+			width: fit-content;
+			position: flex;
+			padding: 18vh 0 5vh 46vw;
+		}
+
 		.img_container {
 			margin: 0 15vw;
 
@@ -650,6 +667,7 @@
 
 		.add-ons {
 			margin: 20vh 25vw;
+			width: 50vw;
 
 			li {
 				font-size: var(--f_lg);
@@ -692,6 +710,40 @@
 				svg {
 					margin: 0 5vw 0 10vw;
 				}
+			}
+		}
+
+		.requirements-table {
+			width: 50vw;
+			border-collapse: collapse;
+			margin: 10vh 25vw;
+
+			caption {
+				font-weight: bold;
+				text-align: center;
+				padding: 10px;
+				background-color: var(--text_Alt);
+			}
+
+			th,
+			td {
+				border: 1px solid var(--text_Alt);
+				padding: 8px;
+			}
+
+			th {
+				background-color: var(--back_Alt);
+				color: var(--back_Main);
+			}
+
+			td {
+				svg {
+					margin: 0 5vw 0 10vw;
+				}
+			}
+
+			tbody tr:nth-child(even) {
+				background-color: var(--text_Alt);
 			}
 		}
 	}

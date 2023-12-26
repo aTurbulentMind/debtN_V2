@@ -43,8 +43,8 @@
 	</div>
 
 	<div class="card">
-		<h2 class="card-title">Documentation</h2>
 		<svg><Doc_Svg /></svg>
+		<h2 class="card-title">Documentation</h2>
 		<br />
 		<div class="body">
 			Access comprehensive resources. Explore our documentation for valuable insights on debt
@@ -55,18 +55,15 @@
 
 <!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
-	h4 {
-		display: none;
-	}
-
 	.grid {
 		border-radius: var(--rad);
 		z-index: 900;
+		border: var(--bord);
 		.card {
 			box-shadow: none;
 			svg {
-				width: 40%;
-				margin: -50px 30%;
+				width: 20%;
+				margin: -50px 40%;
 			}
 
 			.card-title {
@@ -82,6 +79,8 @@
 	.head_Line {
 		background: var(--back_Main);
 		z-index: 901;
+		margin: 8vh 0 -13.7vh 24vw;
+		font-size: var(--font);
 		border-radius: var(--rad);
 		border: var(--bord);
 		padding: var(--pad);
