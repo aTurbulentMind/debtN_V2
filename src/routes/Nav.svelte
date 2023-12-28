@@ -37,7 +37,15 @@
 				on:keydown={() => (isMenuOpen = false)}
 				class="space"
 			>
-				<a class:current={current === 4} on:click={() => (current = 4)} href="/">Home</a>
+				<a class:current={current === 4} on:click={() => (current = 4)} href="/services">Services</a
+				>
+			</li>
+			<li
+				on:click={() => (isMenuOpen = false)}
+				on:keydown={() => (isMenuOpen = false)}
+				class="space"
+			>
+				<a class:current={current === 5} on:click={() => (current = 5)} href="/">Home</a>
 			</li>
 		</ul>
 	</nav>
@@ -89,6 +97,7 @@
 	@media only screen and (max-width: 767px) {
 		.navbar {
 			height: 3rem;
+			display: none;
 		}
 
 		nav {

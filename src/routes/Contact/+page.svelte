@@ -19,6 +19,10 @@
 		<div class="body">
 			Swift solutions at your fingertips. Call now for expert assistance in resolving your financial
 			concerns.
+			<br />
+			Toll Free: <a href="/"> 1-800-552-8397</a>
+			<br />
+			Fax: <a href="/">1-253-204-2349</a>
 		</div>
 	</div>
 
@@ -28,7 +32,7 @@
 		<br />
 		<div class="body">
 			Reach out effortlessly. Send us an email to start the conversation about your debt management
-			needs.
+			needs to <a href="/">info@debtnet5.com</a>
 		</div>
 	</div>
 
@@ -39,6 +43,8 @@
 		<div class="body">
 			Dedicated support team ready to guide you. Our experts are here to assist you every step of
 			the way.
+			<br />
+			Toll Free: <a href="/"> 1-800-552-8397</a>
 		</div>
 	</div>
 

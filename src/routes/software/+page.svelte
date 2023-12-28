@@ -36,6 +36,30 @@
 
 <h1>Software</h1>
 
+<div class="text_Block">
+	<p class="text_Box">
+		There are two Debt$Net® collection software products: Debt$Net® Prestige, a SQL client server
+		system designed for mid to large sized agencies and Debt$Net® Power, designed to optimize
+		business operations on a local area network.
+	</p>
+	<p class="text_Box">
+		Licenses for either product can be purchased outright or we also offer a month to month
+		subscription program called Running Start. Our products are module, and you may even purchase a
+		Venture, feature-block system if you don't require a full system. Add on modules called Extended
+		Service Options allow you to expand the business features of the core product to accommodate
+		agency needs such as skip tracing or letter outsourcing.
+	</p>
+	<p class="text_Box">
+		The sales quotes for a Debt$Net® system can offer cash, credit card, lease, subscription and
+		contract terms. Typical sales quotes will include a base system, additional user licenses as
+		required, add on modules, training, technical support and initial set-up. Data conversions, if
+		necessary, may also be included.
+	</p>
+	<p class="text_Box">
+		Below are further descriptions of the product and purchasing options available:
+	</p>
+</div>
+
 <div class="img_container">
 	<button
 		class={focused === 'img_Left' ? 'focused' : 'unfocused'}
@@ -144,18 +168,9 @@
 
 	<div class="text_Block">
 		<p class="text_Box">
-			Our commitment to exceptional taste starts with the careful selection of natural, high-quality
-			ingredients. We believe that great pizza begins with the finest elements, and that's why we
-			source locally whenever possible. From the rich, vine-ripened tomatoes in our savory sauce to
-			the premium, locally-sourced cheeses that blanket our dough, each ingredient is chosen with
-			care and consideration.
-		</p>
-
-		<p class="text_Box">
-			Our passion to natural goodness isn't just about taste; it's about providing you with a dining
-			experience that is fresh, wholesome, and free from unnecessary additives. Every slice is a
-			testament to our dedication to crafting pizzas that not only delight your taste buds but also
-			nourish your body with the goodness that only natural ingredients can provide.
+			Debt$Net® Power is also premise based and licensed on a per user basis. This version of the
+			software is designed to optimize business operations on a local area network. Debt$Net® Power
+			starts at $4,000.
 		</p>
 	</div>
 
@@ -320,18 +335,9 @@
 
 	<div class="text_Block">
 		<p class="text_Box">
-			Our commitment to exceptional taste starts with the careful selection of natural, high-quality
-			ingredients. We believe that great pizza begins with the finest elements, and that's why we
-			source locally whenever possible. From the rich, vine-ripened tomatoes in our savory sauce to
-			the premium, locally-sourced cheeses that blanket our dough, each ingredient is chosen with
-			care and consideration.
-		</p>
-
-		<p class="text_Box">
-			Our passion to natural goodness isn't just about taste; it's about providing you with a dining
-			experience that is fresh, wholesome, and free from unnecessary additives. Every slice is a
-			testament to our dedication to crafting pizzas that not only delight your taste buds but also
-			nourish your body with the goodness that only natural ingredients can provide.
+			Debt$Net® Prestige is premise based and licensed on a per user basis. This award-winning
+			collection software was developed with enterprise agencies in mind. It does require SQL server
+			software and starts at $6,000.
 		</p>
 	</div>
 
@@ -510,11 +516,30 @@
 	</tbody>
 </table>
 
+<h3>Other Products</h3>
+
+<div class="text_Block">
+	<p class="text_Box">
+		Debt$Net® Venture is the perfect product for both start-up agencies and existing agencies
+		wishing to expand their operations. As a derivative product, Venture provides all the core
+		functions of Debt$Net® required to jump-start your collection agency. Starting at $1,600,
+		Debt$Net® Venture can also be built up to a fully powered Debt$Net® system as your company
+		grows by adding in blocks of features.
+	</p>
+	<p class="text_Box">
+		Debt$Net® Running Start also offers the ability to subscribe to award-winning Debt$Net®
+		collection software on a month-by-month basis. Running start will equip you with a fully
+		functional, fully licensed copy of Debt$Net® for only $195 per month, allowing you to jumpstart
+		your collections business while at the same time keeping overhead costs low.
+	</p>
+</div>
+
 <!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
 	h1,
 	h3 {
 		width: fit-content;
+		position: flex;
 		padding: 10vh 0 10vh 15vw;
 	}
 
@@ -649,36 +674,87 @@
 
 		.img_container {
 			margin: 0 15vw;
+			display: flex;
+			justify-content: space-around;
+
+			.img_Left,
+			.img_Right {
+				transition: all 0.5s ease;
+			}
 
 			button {
+				border-radius: var(--rad);
+				cursor: pointer;
 				h2 {
 					padding: var(--pad);
 				}
 
 				img {
-					height: 50vh;
+					width: 30vw;
 				}
 
 				p {
 					font-size: var(--f_m);
+					margin-top: 0;
 				}
+			}
+
+			.focused {
+				background: var(--back_Alt);
+				color: var(--back_Main);
+				transform: scale(1);
+				margin: 0 10vw;
+			}
+
+			.unfocused {
+				transform: scale(0.6);
+				background-color: var(--back_Tre);
+				color: var(--back_Main);
+				margin: 0 5vw;
+
+				p,
+				.text_Box {
+					display: none;
+				}
+			}
+			p {
+				padding: 3%;
 			}
 		}
 
 		.add-ons {
 			margin: 20vh 25vw;
+			list-style-type: none;
 			width: 50vw;
+
+			.pwrSelected,
+			.selected {
+				border: var(--bord);
+				border-radius: var(--rad);
+				background-color: var(--back_Alt);
+				color: var(--back_Main);
+			}
 
 			li {
 				font-size: var(--f_lg);
 				padding: 1%;
 				margin: 2vh 0;
+				background-color: var(--highlight);
+				border: var(--bord);
+				border-radius: var(--rad);
+				cursor: pointer;
+				width: fit-content;
 
 				p {
 					font-size: var(--f_m);
 					padding: 2%;
 					margin: 0 8vw;
+					cursor: default;
 				}
+			}
+
+			.hidden {
+				display: none;
 			}
 		}
 
@@ -695,28 +771,7 @@
 		.requirements-table {
 			width: 50vw;
 			margin: 10vh 25vw;
-
-			caption {
-				padding: 10px;
-				background-color: var(--text_Alt);
-			}
-
-			th,
-			td {
-				padding: 8px;
-			}
-
-			td {
-				svg {
-					margin: 0 5vw 0 10vw;
-				}
-			}
-		}
-
-		.requirements-table {
-			width: 50vw;
 			border-collapse: collapse;
-			margin: 10vh 25vw;
 
 			caption {
 				font-weight: bold;
