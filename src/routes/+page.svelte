@@ -402,18 +402,17 @@
 	}
 
 	@media only screen and (min-width: 1280px) {
-		.hero {
+			.hero {
 			form {
 				h2 {
-					font-size: var(--font);
+					font-size: var(--f_m);
 				}
 
 				p {
-					font-size: var(--font);
+					font-size: var(--f_m);
 				}
 			}
 		}
-
 
 		.grid {
 			margin: 10vh 10vw;
@@ -433,8 +432,12 @@
 			right: 1vw;
 			margin-top: -100vh;
 
-			a {
+			p{
 				font-size: var(--font);
+			}
+
+			a {
+				font-size: var(--f_m);
 			}
 		}
 	}
