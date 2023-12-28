@@ -7,7 +7,7 @@
 <style>
 	footer {
 		background-color: var(--back_Alt);
-		display: flex;
+		display: none;
 		justify-content: center;
 		position: relative;
 		bottom: 0;
