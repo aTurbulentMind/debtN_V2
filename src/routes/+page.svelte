@@ -344,14 +344,15 @@
 				}
 
 				p {
-					top: 6vh;
-					margin-top: 2vh;
+					top: 4vh;
+					margin-top: 3vh;
 				}
 
 				input {
 					right: 5vw;
 					width: 15vw;
 					height: 4vh;
+					margin-top: 0.5vh;
 					font-size: var(--f_lg);
 				}
 

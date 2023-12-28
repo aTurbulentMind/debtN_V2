@@ -673,6 +673,7 @@
 		}
 
 		.img_container {
+			width: 80vw;
 			margin: 0 15vw;
 			display: flex;
 			justify-content: space-around;
@@ -761,6 +762,8 @@
 		.grid {
 			grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
 			grid-template-rows: repeat(auto-fit, minmax(220px, 1fr));
+			width: 80vw;
+			margin-left: 10vw;
 		}
 
 		.sys_Reqs img {
