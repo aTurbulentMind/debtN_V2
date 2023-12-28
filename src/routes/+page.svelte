@@ -400,4 +400,42 @@
 			}
 		}
 	}
+
+	@media only screen and (min-width: 1280px) {
+		.hero {
+			form {
+				h2 {
+					font-size: var(--font);
+				}
+
+				p {
+					font-size: var(--font);
+				}
+			}
+		}
+
+
+		.grid {
+			margin: 10vh 10vw;
+
+			.card {
+				svg {
+					margin: 1vh 35%;
+				}
+
+				.body {
+					font-size: var(--f_m);
+				}
+			}
+		}
+
+		.overLay {
+			right: 1vw;
+			margin-top: -100vh;
+
+			a {
+				font-size: var(--font);
+			}
+		}
+	}
 </style>
