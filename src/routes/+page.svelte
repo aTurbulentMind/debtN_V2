@@ -411,6 +411,10 @@
 				p {
 					font-size: var(--f_m);
 				}
+
+				input {
+					font-size: var(--f_m);
+				}
 			}
 		}
 
@@ -426,6 +430,11 @@
 					font-size: var(--f_m);
 				}
 			}
+		}
+
+
+		.text_Block {
+			margin: 10vh 0vw;
 		}
 
 		.overLay {
