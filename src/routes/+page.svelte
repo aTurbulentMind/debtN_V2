@@ -402,10 +402,16 @@
 	}
 
 	@media only screen and (min-width: 1280px) {
-			.hero {
+		.hero {
+			p {
+				left: 5vw;
+				width: 40vw;
+				font-size: var(--f_xl);
+			}
 			form {
+				height: 45vh;
 				h2 {
-					font-size: var(--f_m);
+					font-size: var(--f_lg);
 				}
 
 				p {
@@ -413,6 +419,10 @@
 				}
 
 				input {
+					font-size: var(--f_m);
+				}
+
+				button {
 					font-size: var(--f_m);
 				}
 			}
@@ -432,16 +442,15 @@
 			}
 		}
 
-
 		.text_Block {
-			margin: 10vh 0vw;
+			margin: 1.5vh 0vw;
 		}
 
 		.overLay {
 			right: 1vw;
-			margin-top: -100vh;
+			margin-top: -95vh;
 
-			p{
+			p {
 				font-size: var(--font);
 			}
 

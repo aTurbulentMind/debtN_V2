@@ -1,13 +1,10 @@
 <script>
-	import Phone_icon from '$lib/svg/phone_Svg.svelte';
-	import Mail_Svg from '$lib/svg/mail_Svg.svelte';
-	import Support_Svg from '$lib/svg/support_Svg.svelte';
-	import Doc_Svg from '$lib/svg/doc_Svg.svelte';
-
 	import Gary from '$lib/assets/gary.jpg';
 	import Tony from '$lib/assets/tony.jpg';
 	import Justin from '$lib/assets/justin.jpg';
 	import Julee from '$lib/assets/julee.jpg';
+	import Jungle from '$lib/assets/jungle.jpg';
+	import Richrich from '$lib/assets/richrichrich.jpg';
 
 	let items = [
 		{
@@ -82,25 +79,31 @@
 
 <h1>About</h1>
 
+<img_Intro>
+	<img src={Jungle} alt="background" />
+
+	<div class="text_Block">
+		<p class="text_Box">
+			Founded in 1987 by principals Tony LaMagna and Gary Grout, the company has developed and
+			provides the industry their premier core product, Debt$Net®, as well as supporting software
+			modules, training, custom programming and technical support.
+		</p>
+
+		<p class="text_Box glass_Back">
+			Debt$Net®, created by The Computer Manager, Inc., has provided collection agencies, law
+			firms, debt buyers and in-house collection departments with one of the most comprehensive debt
+			collection systems in the industry. Proven in the field, Debt$Net® collection software has
+			satisfied the debt recovery requirements for over 1,000 companies specializing in Retail,
+			Commercial, Medical, Receivables Management and Check Collections. Debt$Net® users can be
+			found throughout the United States and Canada.
+		</p>
+	</div>
+</img_Intro>
+
+<h2>Sales Approach</h2>
 <div class="text_Block">
-	<p class="text_Box">
-		Founded in 1987 by principals Tony LaMagna and Gary Grout, the company has developed and
-		provides the industry their premier core product, Debt$Net®, as well as supporting software
-		modules, training, custom programming and technical support.
-	</p>
-
-	<p class="text_Box glass_Back">
-		Debt$Net®, created by The Computer Manager, Inc., has provided collection agencies, law firms,
-		debt buyers and in-house collection departments with one of the most comprehensive debt
-		collection systems in the industry. Proven in the field, Debt$Net® collection software has
-		satisfied the debt recovery requirements for over 1,000 companies specializing in Retail,
-		Commercial, Medical, Receivables Management and Check Collections. Debt$Net® users can be found
-		throughout the United States and Canada.
-	</p>
-
-	<h2>Sales Approach</h2>
-
-	<p class="text_Box">
+	<img class="backBack" src={Richrich} alt="background" />
+	<p class="text_Box overLay glass_Back">
 		Our interactive sales approach ensures a tailored fit between your company and Debt$Net®
 		software. Start with our videos for a basic fit assessment. If interested, contact our marketing
 		staff for more information and to begin a comprehensive software analysis. Work closely with our
@@ -161,7 +164,7 @@
 			<img src={Justin} alt="background" />
 		</div>
 
-		<p class="text_Box glass_Back">
+		<p class="text_Box">
 			Justin Brien, Technical Support Manager, has over 18 years experience resolving Debt$Net®
 			clients' technical issues and training new Debt$Net® users. He has extensive knowledge in
 			daily processes of a collection agency and collection department. Justin has a Bachelor's
@@ -260,6 +263,39 @@
 			padding: 18vh 0 5vh 46vw;
 			width: fit-content;
 			position: flex;
+		}
+	}
+
+	@media only screen and (min-width: 1280px) {
+		h1,
+		h2 {
+			font-size: var(--f_xl);
+		}
+
+		img_Intro {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+
+			img {
+				height: 100vh;
+			}
+
+			.text_Box {
+				width: 40vw;
+				margin: 20vh 2vw;
+			}
+		}
+
+		.text_Block {
+			.backBack {
+				width: 100vw;
+				height: 110vh;
+				object-fit: cover;
+			}
+		}
+
+		.overLay {
+			margin-top: -60vh;
 		}
 	}
 </style>

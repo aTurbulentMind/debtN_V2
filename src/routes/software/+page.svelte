@@ -56,7 +56,8 @@
 		necessary, may also be included.
 	</p>
 	<p class="text_Box">
-		Below are further descriptions of the product and purchasing options available:
+		Below are further descriptions of the product and purchasing options available, click to view
+		information:
 	</p>
 </div>
 
