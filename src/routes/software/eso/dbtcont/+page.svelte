@@ -31,67 +31,27 @@
 
 <h1>ESO's</h1>
 
+<h2>Debtor Contact Enhancements</h2>
+
 <ul class="add-ons">
 	{#each items as item (item.name)}
-		<li
-			class={selected === item.name ? 'selected' : 'unselected'}
-			on:click={() => select(item.name)}
-		>
-			{item.name}
-			<p class={selected === item.name ? '' : 'hidden'}>
-				{item.text}
-			</p>
+		<li>
+			<button
+				class={selected === item.name ? 'selected' : 'unselected'}
+				on:click={() => select(item.name)}
+			>
+				{item.name}
+				<p class={selected === item.name ? '' : 'hidden'}>
+					{item.text}
+				</p>
+			</button>
 		</li>
 	{/each}
 </ul>
 
 <!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
-	h1,
-	h3 {
-		width: fit-content;
-		position: flex;
-		padding: 10vh 0 10vh 15vw;
-	}
-
 	.add-ons {
-		display: grid;
 		grid-template-columns: 1fr;
-		list-style-type: none;
-		width: 80vw;
-		margin: 2vw 10vw;
-
-		.selected {
-			border: var(--bord);
-			border-radius: var(--rad);
-			background-color: var(--back_Alt);
-			color: var(--back_Main);
-		}
-
-		.unselected {
-			height: fit-content;
-		}
-
-		li {
-			background-color: var(--highlight);
-			border: var(--bord);
-			border-radius: var(--rad);
-			font-size: var(--f_lg);
-			cursor: pointer;
-			width: fit-content;
-			padding: 1%;
-			margin: 2vh auto;
-
-			p {
-				font-size: var(--font);
-				padding: 0;
-				margin: 5% 0;
-				cursor: default;
-			}
-		}
-
-		.hidden {
-			display: none;
-		}
 	}
 </style>

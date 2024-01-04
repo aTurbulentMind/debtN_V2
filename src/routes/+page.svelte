@@ -187,13 +187,15 @@
 
 			h2 {
 				font-size: var(--f_m);
+				margin: 0;
+				margin-top: -10vh;
 			}
 
 			p {
 				position: relative;
-				top: 1vh;
+				top: -5vh;
 				left: 0.01vw;
-				margin-top: 4.5vh;
+				margin-top: 4.25vh;
 			}
 
 			input {
@@ -230,20 +232,18 @@
 		}
 	}
 
-	h1 {
-		padding: 8vh 0 5vh 6vw;
-		width: fit-content;
-		position: flex;
-		font-size: var(--f_lg);
-	}
-
 	.grid {
 		grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-		gap: 15px;
-		margin: 5vh 5vw;
+		gap: var(--gap);
+		margin: var(--full_blk);
 
 		.card {
 			margin: 5vh auto;
+
+			svg {
+				width: 20vw;
+				margin: 1vh 35%;
+			}
 			.card-title {
 				font-size: var(--f_m);
 			}
@@ -258,13 +258,9 @@
 
 	.alt_Color {
 		padding: 10vh 0;
-		background-color: var(--extra);
-		color: var(--back_Main);
 	}
 
 	.overLay {
-		margin-top: -100vh;
-
 		a {
 			font-size: var(--f_lg);
 			margin-bottom: 20vh;
@@ -272,10 +268,6 @@
 	}
 
 	@media only screen and (min-width: 740px) {
-		h1 {
-			padding: 18vh 0 5vh 46vw;
-		}
-
 		.hero {
 			height: 110vh;
 			h1 {
@@ -341,10 +333,12 @@
 
 				h2 {
 					font-size: var(--f_xl);
+					margin: 0;
+					margin-top: -10vh;
 				}
 
 				p {
-					top: 4vh;
+					top: 0;
 					margin-top: 3vh;
 				}
 
@@ -372,6 +366,27 @@
 		.text_Block {
 			height: 100vh;
 			margin-bottom: 0;
+
+			.overLay {
+				display: relative;
+				position: absolute;
+				width: 40vw;
+				right: 2.5vw;
+				margin-top: -90vh;
+
+				p {
+					margin-top: 3vh;
+				}
+
+				a {
+					font-size: var(--f_xl);
+				}
+			}
+		}
+		.alt_Color {
+			.text_Box {
+				padding-top: 15vh;
+			}
 		}
 
 		.grid {
@@ -379,24 +394,9 @@
 
 			.card {
 				svg {
+					width: 5vw;
 					margin: 3vh 35%;
 				}
-
-				.body {
-					font-size: var(--f_m);
-				}
-			}
-		}
-
-		.overLay {
-			display: relative;
-			position: absolute;
-			width: 40vw;
-			right: 5vw;
-			margin-top: -100vh;
-
-			a {
-				font-size: var(--f_xl);
 			}
 		}
 	}

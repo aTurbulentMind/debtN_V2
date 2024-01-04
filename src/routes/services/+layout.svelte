@@ -38,13 +38,16 @@
 
 		ul {
 			position: fixed;
+			display: flex;
 			margin: 50vh 2vw;
+			transform: rotate(270deg);
 			width: 8vw;
-			border-right: 1px solid var(--back_Hallow);
 
 			li {
 				list-style: none;
 				cursor: pointer;
+				padding: 0 2vw;
+				border-right: 1px solid var(--back_Hallow);
 			}
 		}
 	}
@@ -52,5 +55,28 @@
 	.selected {
 		background-color: var(--back_Alt);
 		color: var(--back_Main);
+	}
+
+	@media (min-width: 980px) {
+		meni {
+			display: flex;
+
+			ul {
+				position: fixed;
+				margin: 50vh 2vw;
+				width: 8vw;
+				border-right: 1px solid var(--back_Hallow);
+
+				li {
+					list-style: none;
+					cursor: pointer;
+				}
+			}
+		}
+
+		.selected {
+			background-color: var(--back_Alt);
+			color: var(--back_Main);
+		}
 	}
 </style>

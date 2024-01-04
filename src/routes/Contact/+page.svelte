@@ -5,7 +5,7 @@
 	import Doc_Svg from '$lib/svg/doc_Svg.svelte';
 </script>
 
-<h4>words</h4>
+<h4>Hello :)</h4>
 
 <div class="head_Line">
 	<h1>CONTACT</h1>
@@ -62,8 +62,6 @@
 <!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
 	.grid {
-		border-radius: var(--rad);
-		z-index: 900;
 		border: var(--bord);
 		.card {
 			box-shadow: none;
@@ -92,18 +90,17 @@
 		padding: var(--pad);
 		width: fit-content;
 		position: relative;
+
+		h1 {
+			padding: 0;
+		}
 	}
 
 	@media only screen and (min-width: 980px) {
-		h4 {
-			display: flex;
-		}
-
 		.grid {
 			grid-template-columns: repeat(auto-fit, minmax(620px, 1fr));
 			grid-template-rows: repeat(auto-fit, minmax(420px, 1fr));
 			gap: var(--pad_xl);
-			border: var(--bord);
 			position: relative;
 			margin-bottom: 6.9vh;
 
@@ -121,13 +118,16 @@
 
 				.body {
 					font-size: var(--f_m);
-					padding: var(--pad);
 				}
 			}
 		}
 
 		.head_Line {
 			margin: 8vh 0 -13.7vh 45vw;
+			h1 {
+				padding: 0;
+				width: fit-content;
+			}
 		}
 	}
 </style>

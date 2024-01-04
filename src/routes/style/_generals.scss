@@ -9,7 +9,7 @@
 		color: var(--text_Main);
 		background-color: var(--back_Main);
 		font-family: var(--font_Main);
-        overflow-x: hidden;
+    overflow-x: hidden;
 	}
 
     a {
@@ -20,14 +20,24 @@
 
     &:hover {
         transition: all 0.3s ease-in-out;
-        color: var(--highlight);
+        color: var(--grabber);
         transform: scale(1.1);
         cursor: pointer;
         text-decoration: underline;
-        text-shadow: var(--text_Shadow);
+        text-shadow: var(--text_Light);
     }
 
     }
+
+    h1, h2, h3 {
+		padding: 10vh 0 5vh 6vw;
+		width: fit-content;
+		font-size: var(--f_lg);
+	}
+
+    .overLay {
+		margin-top: -100vh;
+	}
 
     span{
         color: var(--highlight);
@@ -35,8 +45,18 @@
 
 
 
-    @media (min-width: 780px) {}
+    @media (min-width: 740px) {
+      h1 {
+			padding: 18vh 0 5vh 46vw;
+		}
+    }
 
-    @media (min-width: 1280px) {}
+    @media (min-width: 980px) {
+    }
 
-    @media (min-width: 1280px) {}
+    @media (min-width: 1280px) {
+    h1, h2, h3 {
+			font-size: var(--f_xl);
+		padding: 10vh 0 5vh 25vw;
+		}
+    }

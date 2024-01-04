@@ -111,51 +111,13 @@
 
 <!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
-	h1,
-	h3 {
-		width: fit-content;
-		position: flex;
-		padding: 10vh 0 10vh 15vw;
+	.add-ons {
+		grid-template-columns: 1fr;
 	}
 
-	.add-ons {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		list-style-type: none;
-		width: 80vw;
-		margin: 2vw 10vw;
-
-		.selected {
-			border: var(--bord);
-			border-radius: var(--rad);
-			background-color: var(--back_Alt);
-			color: var(--back_Main);
-		}
-
-		.unselected {
-			height: fit-content;
-		}
-
-		li {
-			background-color: var(--highlight);
-			border: var(--bord);
-			border-radius: var(--rad);
-			font-size: var(--f_lg);
-			cursor: pointer;
-			width: fit-content;
-			padding: 1%;
-			margin: 2vh auto;
-
-			p {
-				font-size: var(--font);
-				padding: 0;
-				margin: 5% 0;
-				cursor: default;
-			}
-		}
-
-		.hidden {
-			display: none;
+	@media only screen and (min-width: 980px) {
+		.add-ons {
+			grid-template-columns: 1fr 1fr 1fr;
 		}
 	}
 </style>

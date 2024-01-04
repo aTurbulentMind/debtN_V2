@@ -10,7 +10,7 @@
 </script>
 
 <div class="navbar">
-	<a href="/" class="logo"><h1>DEBT$NET</h1></a>
+	<a href="/" class="logo">DEBT$NET</a>
 	<nav class:open={isMenuOpen}>
 		<!--this is the main navigation menu-->
 		<ul>
@@ -97,7 +97,6 @@
 	@media only screen and (max-width: 767px) {
 		.navbar {
 			height: 3rem;
-			display: none;
 		}
 
 		nav {

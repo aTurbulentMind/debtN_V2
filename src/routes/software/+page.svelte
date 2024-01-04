@@ -6,56 +6,62 @@
 	let focusElement = (id) => (focused = id);
 
 	let pwritems = [
-		{ pwrName: 'pwr-addon-1', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...' },
 		{
-			pwrName: 'pwr-addon-2',
+			pwrName: 'pwr-Special Feature-1',
+			text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...'
+		},
+		{
+			pwrName: 'pwr-Special Feature-2',
 			text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit eaque blanditiis nam libero assumenda quod!'
 		},
 		{
-			pwrName: 'pwr-addon-3',
+			pwrName: 'pwr-Special Feature-3',
 			text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit eaque blanditiis nam libero assumenda quod!'
 		}
 	];
-	let pwrSelected = 'pwr-addon-1';
+	let pwrSelected = 'pwr-Special Feature-1';
 	let pwrSelect = (pwrName) => (pwrSelected = pwrName);
 
 	let items = [
-		{ name: 'Prest-addon-4', text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...' },
 		{
-			name: 'Prest-addon-5',
+			name: 'Prest-Special Feature-4',
+			text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...'
+		},
+		{
+			name: 'Prest-Special Feature-5',
 			text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit eaque blanditiis nam libero assumenda quod!'
 		},
 		{
-			name: 'Prest-addon-6',
+			name: 'Prest-Special Feature-6',
 			text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit eaque blanditiis nam libero assumenda quod!'
 		}
 	];
-	let selected = 'Prest-addon-4';
+	let selected = 'Prest-Special Feature-4';
 	let select = (name) => (selected = name);
 </script>
 
 <h1>Software</h1>
 
 <div class="text_Block">
-	<p class="text_Box">
+	<p class="text_Box cut_Box">
 		There are two Debt$Net® collection software products: Debt$Net® Prestige, a SQL client server
 		system designed for mid to large sized agencies and Debt$Net® Power, designed to optimize
 		business operations on a local area network.
 	</p>
-	<p class="text_Box">
+	<p class="text_Box cut_Box">
 		Licenses for either product can be purchased outright or we also offer a month to month
 		subscription program called Running Start. Our products are module, and you may even purchase a
 		Venture, feature-block system if you don't require a full system. Add on modules called Extended
 		Service Options allow you to expand the business features of the core product to accommodate
 		agency needs such as skip tracing or letter outsourcing.
 	</p>
-	<p class="text_Box">
+	<p class="text_Box cut_Box">
 		The sales quotes for a Debt$Net® system can offer cash, credit card, lease, subscription and
 		contract terms. Typical sales quotes will include a base system, additional user licenses as
 		required, add on modules, training, technical support and initial set-up. Data conversions, if
 		necessary, may also be included.
 	</p>
-	<p class="text_Box">
+	<p class="text_Box cut_Box">
 		Below are further descriptions of the product and purchasing options available, click to view
 		information:
 	</p>
@@ -95,7 +101,7 @@
 </div>
 
 {#if focused === 'img_Left'}
-	<h3>PowerS Features</h3>
+	<h3>PowerS Special Features</h3>
 
 	<div class="grid">
 		<div class="card">
@@ -168,7 +174,7 @@
 	<h3>PowerS Info</h3>
 
 	<div class="text_Block">
-		<p class="text_Box">
+		<p class="text_Box cut_Box">
 			Debt$Net® Power is also premise based and licensed on a per user basis. This version of the
 			software is designed to optimize business operations on a local area network. Debt$Net® Power
 			starts at $4,000.
@@ -179,14 +185,16 @@
 
 	<ul class="add-ons">
 		{#each pwritems as pwrItem (pwrItem.pwrName)}
-			<li
-				class={pwrSelected === pwrItem.pwrName ? 'pwrSelected' : ''}
-				on:click={() => pwrSelect(pwrItem.pwrName)}
-			>
-				{pwrItem.pwrName}
-				<p class={pwrSelected === pwrItem.pwrName ? '' : 'hidden'}>
-					{pwrItem.text}
-				</p>
+			<li>
+				<button
+					class={pwrSelected === pwrItem.pwrName ? 'pwrSelected' : ''}
+					on:click={() => pwrSelect(pwrItem.pwrName)}
+				>
+					{pwrItem.pwrName}
+					<p class={pwrSelected === pwrItem.pwrName ? '' : 'hidden'}>
+						{pwrItem.text}
+					</p>
+				</button>
 			</li>
 		{/each}
 	</ul>
@@ -335,22 +343,24 @@
 	<h3>Prestige 2023 Info</h3>
 
 	<div class="text_Block">
-		<p class="text_Box">
+		<p class="text_Box cut_Box">
 			Debt$Net® Prestige is premise based and licensed on a per user basis. This award-winning
 			collection software was developed with enterprise agencies in mind. It does require SQL server
 			software and starts at $6,000.
 		</p>
 	</div>
 
-	<h3>Prestige 2023 Add-ons</h3>
+	<h3>Prestige 2023 Special Features</h3>
 
 	<ul class="add-ons">
 		{#each items as item (item.name)}
-			<li class={selected === item.name ? 'selected' : ''} on:click={() => select(item.name)}>
-				{item.name}
-				<p class={selected === item.name ? '' : 'hidden'}>
-					{item.text}
-				</p>
+			<li>
+				<button class={selected === item.name ? 'selected' : ''} on:click={() => select(item.name)}>
+					{item.name}
+					<p class={selected === item.name ? '' : 'hidden'}>
+						{item.text}
+					</p>
+				</button>
 			</li>
 		{/each}
 	</ul>
@@ -436,14 +446,14 @@
 		class={focused === 'img_Left' ? 'focused' : 'unfocused'}
 		on:click={() => focusElement('img_Left')}
 	>
-		<h2>PowerS</h2>
+		<h3>PowerS</h3>
 	</button>
 
 	<button
 		class={focused === 'img_Right' ? 'focused' : 'unfocused'}
 		on:click={() => focusElement('img_Right')}
 	>
-		<h2>Prestige23</h2>
+		<h3>Prestige23</h3>
 	</button>
 </div>
 
@@ -520,14 +530,14 @@
 <h3>Other Products</h3>
 
 <div class="text_Block">
-	<p class="text_Box">
+	<p class="text_Box cut_Box">
 		Debt$Net® Venture is the perfect product for both start-up agencies and existing agencies
 		wishing to expand their operations. As a derivative product, Venture provides all the core
 		functions of Debt$Net® required to jump-start your collection agency. Starting at $1,600,
 		Debt$Net® Venture can also be built up to a fully powered Debt$Net® system as your company
 		grows by adding in blocks of features.
 	</p>
-	<p class="text_Box">
+	<p class="text_Box cut_Box">
 		Debt$Net® Running Start also offers the ability to subscribe to award-winning Debt$Net®
 		collection software on a month-by-month basis. Running start will equip you with a fully
 		functional, fully licensed copy of Debt$Net® for only $195 per month, allowing you to jumpstart
@@ -537,21 +547,15 @@
 
 <!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
-	h1,
-	h3 {
-		width: fit-content;
-		position: flex;
-		padding: 10vh 0 10vh 15vw;
-	}
-
 	.img_container {
 		display: relative;
 		justify-content: space-around;
-		margin: 1vh 2.5vw;
+		margin: 1vh 2.5vw 1vh 10vw;
+		width: 80vw;
 
 		.img_Left,
 		.img_Right {
-			transition: all 0.5s ease;
+			transition: all 0.5s ease-in-out;
 		}
 
 		button {
@@ -566,12 +570,21 @@
 				font-size: var(--f_m);
 				margin-top: 0;
 			}
+
+			h3 {
+				padding: 0;
+				margin: 0;
+			}
 		}
 
 		.focused {
 			background: var(--back_Alt);
 			color: var(--back_Main);
 			transform: scale(1);
+
+			h3 {
+				box-shadow: var(--box_Light);
+			}
 		}
 
 		.unfocused {
@@ -579,6 +592,10 @@
 			background-color: var(--back_Tre);
 			color: var(--back_Main);
 			margin: 5vh 15vw;
+
+			h3 {
+				box-shadow: var(--box_Shadow);
+			}
 
 			p,
 			.text_Box {
@@ -592,45 +609,14 @@
 	}
 
 	.add-ons {
-		list-style-type: none;
 		width: 90vw;
 		margin: 2vw 5vw;
-
-		.pwrSelected,
-		.selected {
-			border: var(--bord);
-			border-radius: var(--rad);
-			background-color: var(--back_Alt);
-			color: var(--back_Main);
-		}
-
-		li {
-			background-color: var(--highlight);
-			border: var(--bord);
-			border-radius: var(--rad);
-			font-size: var(--f_lg);
-			cursor: pointer;
-			width: fit-content;
-			padding: 1%;
-			margin: 2vh auto;
-
-			p {
-				font-size: var(--font);
-				padding: 2%;
-				margin: 0 5vw;
-				cursor: default;
-			}
-		}
-
-		.hidden {
-			display: none;
-		}
 	}
 
 	.requirements-table {
 		width: 50vw;
 		border-collapse: collapse;
-		margin: 5vh 0;
+		margin: 5vh 0 5vh 5vw;
 
 		caption {
 			font-weight: bold;
@@ -642,7 +628,7 @@
 		th,
 		td {
 			border: 1px solid var(--text_Alt);
-			padding: 8px;
+			padding: 3px;
 		}
 
 		th {
@@ -666,18 +652,15 @@
 	}
 
 	@media only screen and (min-width: 980px) {
-		h1,
-		h3 {
-			width: fit-content;
-			position: flex;
-			padding: 18vh 0 5vh 46vw;
-		}
-
 		.img_container {
 			width: 80vw;
 			margin: 0 15vw;
 			display: flex;
 			justify-content: space-around;
+
+			h2 {
+				font-size: var(--f_lg);
+			}
 
 			.img_Left,
 			.img_Right {
@@ -765,11 +748,6 @@
 			grid-template-rows: repeat(auto-fit, minmax(220px, 1fr));
 			width: 80vw;
 			margin-left: 10vw;
-		}
-
-		.sys_Reqs img {
-			width: 40vw;
-			margin: 0 30vw 5vh;
 		}
 
 		.requirements-table {

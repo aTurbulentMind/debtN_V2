@@ -95,13 +95,6 @@
 
 <!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
-	h1 {
-		padding: 10vh 0 5vh 6vw;
-		width: fit-content;
-		position: flex;
-		font-size: var(--f_lg);
-	}
-
 	.grid {
 		.card {
 			svg {
@@ -120,12 +113,6 @@
 	}
 
 	@media only screen and (min-width: 980px) {
-		h1 {
-			padding: 18vh 0 5vh 46vw;
-			width: fit-content;
-			position: flex;
-		}
-
 		.grid {
 			.card {
 				.card-title {

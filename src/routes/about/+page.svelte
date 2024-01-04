@@ -103,19 +103,20 @@
 <h2>Sales Approach</h2>
 <div class="text_Block">
 	<img class="backBack" src={Richrich} alt="background" />
-	<p class="text_Box overLay glass_Back">
+	<p class="text_Box cut_Box overLay glass_Back">
 		Our interactive sales approach ensures a tailored fit between your company and Debt$Net®
 		software. Start with our videos for a basic fit assessment. If interested, contact our marketing
 		staff for more information and to begin a comprehensive software analysis. Work closely with our
 		trainers, well-versed in collection industry needs, during the analysis. Guided Walk-Thrus
-		showcase how Debt$Net® meets your business practices and handles various procedures. Categories
-		include agency configuration, client screens, debtor and account screens, collection management,
-		trust accounting, administrative procedures, and IT staff support. After evaluation, our
-		marketing staff provides a customized price quote package for your company's needs. At The
-		Computer Manager, Inc., we value your confidence in Debt$Net® collection software.
+		showcase how Debt$Net® meets your business practices and handles various procedures.
+		<br /><br />
+		Categories include agency configuration, client screens, debtor and account screens, collection management,
+		trust accounting, administrative procedures, and IT staff support. After evaluation, our marketing
+		staff provides a customized price quote package for your company's needs. At The Computer Manager,
+		Inc., we value your confidence in Debt$Net® collection software.
 	</p>
 
-	<h2>Workforce</h2>
+	<h2 class="wk">Workforce</h2>
 	<workforce>
 		<div class="img_Face">
 			<img src={Gary} alt="background" />
@@ -176,102 +177,103 @@
 
 <h2>Affiliates</h2>
 
-<ul class="affiliates">
+<ul class="add-ons">
 	{#each items as item (item.name)}
-		<li
-			class={selected === item.name ? 'selected' : 'unselected'}
-			on:click={() => select(item.name)}
-		>
-			{item.name}
-			<p class={selected === item.name ? '' : 'hidden'}>
-				{item.text}
-			</p>
+		<li>
+			<button
+				class={selected === item.name ? 'selected' : 'unselected'}
+				on:click={() => select(item.name)}
+			>
+				{item.name}
+				<p class={selected === item.name ? '' : 'hidden'}>
+					{item.text}
+				</p>
+			</button>
 		</li>
 	{/each}
 </ul>
 
 <!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
-	h1 {
-		padding: 10vh 0 5vh 6vw;
-		width: fit-content;
-		position: flex;
-		font-size: var(--f_lg);
-	}
-
-	h3 {
-		padding: 10vh 0 5vh 15vw;
+	img_Intro {
+		img {
+			object-fit: cover;
+			height: 100vh;
+			width: 100vw;
+		}
 	}
 
 	workforce {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr;
 		gap: 1%;
+		margin-bottom: 25vh;
 
 		.img_Face {
 			img {
-				width: 60%;
-				margin: 0 20%;
+				object-fit: cover;
+				height: 40vh;
+				width: 80vw;
+				margin: 0 10vw;
 			}
 		}
 	}
 
-	.affiliates {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-		list-style-type: none;
-		width: 80vw;
-		margin: 10vw;
-
-		.selected {
-			border: var(--bord);
-			border-radius: var(--rad);
-			background-color: var(--back_Alt);
-			color: var(--back_Main);
+	.text_Block {
+		.overLay {
+			margin-top: -80vh;
 		}
+	}
 
-		.unselected {
-			height: fit-content;
-		}
-
-		li {
-			background-color: var(--highlight);
-			border: var(--bord);
-			border-radius: var(--rad);
-			font-size: var(--f_lg);
-			cursor: pointer;
-			width: fit-content;
-			padding: 1%;
-			margin: 2vh auto;
-
-			p {
-				font-size: var(--font);
-				padding: 0;
-				margin: 5% 0;
-				cursor: default;
-			}
-		}
-
-		.hidden {
-			display: none;
-		}
+	.backBack {
+		object-fit: cover;
+		height: 100vh;
+		width: 100vw;
 	}
 
 	@media only screen and (min-width: 980px) {
-		h1,
+		img_Intro {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+
+			img {
+				height: 100vh;
+			}
+			.text_Block {
+				.text_Box {
+					width: 40vw;
+					margin: 10vh 2vw;
+				}
+			}
+		}
+
+		workforce {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1%;
+
+			.img_Face {
+				img {
+					width: 60%;
+					margin: 0 20%;
+				}
+			}
+		}
+
 		h2 {
-			padding: 18vh 0 5vh 46vw;
-			width: fit-content;
-			position: flex;
+			margin: 20vh 0;
+		}
+
+		.wk {
+			margin-top: 35vh;
+		}
+
+		workforce {
+			margin-top: 30vh;
 		}
 	}
 
 	@media only screen and (min-width: 1280px) {
-		h1,
-		h2 {
-			font-size: var(--f_xl);
-		}
-
 		img_Intro {
 			display: grid;
 			grid-template-columns: 1fr 1fr;

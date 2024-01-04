@@ -1,4 +1,4 @@
-//grid
+//grids
 .grid{
     display: grid;
     align-items: center;
@@ -7,6 +7,7 @@
     gap: 35px;
     margin: 0 5%;
     margin-top: 10vh;
+	border-radius: var(--rad);
 
     .card {
         padding: 15px;
@@ -22,19 +23,14 @@
         .body {
             font-size: var(--font);
             }
+
             @media (min-width: 780px) {
                 .card {
                     padding: 20px;
                     margin: 0 12%;
                 }
         }
-        svg {
-            width: 20%;
-            margin: 0 40%;
-        }
     }
-
-
     @media (min-width: 780px) {
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: var(--pad_xxl);
@@ -44,7 +40,65 @@
             margin: 0 20%;
         }
     }
+
+       @media (min-width: 980px) {
+		.grid {
+			.card {
+				.body {
+					font-size: var(--f_m);
+				}
+			}
+		}
+    }
 }
+
+.add-ons {
+		display: grid;
+		list-style-type: none;
+		width: 80vw;
+		margin: 2vw 10vw;
+
+
+		.selected {
+			border-radius: var(--rad);
+			background-color: var(--back_Main);
+			color: var(--text_Main);
+		}
+
+		.unselected {
+			height: fit-content;
+		}
+
+		li {
+			background-color: var(--back_Main);
+			border: var(--bord);
+			border-radius: var(--rad);
+			font-size: var(--f_lg);
+			cursor: pointer;
+			width: fit-content;
+			padding: 1%;
+			margin: 2vh auto;
+
+            
+        button {
+			background: transparent;
+			border: none;
+			font-size: var(--f_m);
+			color: var(--text_Main);
+		}
+
+			p {
+				font-size: var(--font);
+				padding: 0;
+				margin: 5% 0;
+				cursor: default;
+			}
+		}
+
+		.hidden {
+			display: none;
+		}
+	}
 
 
 //blurred background
@@ -61,8 +115,6 @@
     width: fit-content;
     padding: var(--pad);
 }
-
-
 
 
 //Cards
@@ -96,28 +148,31 @@
 }
 
 //text blocks
-	.text_Block {
+.text_Block {
 		height: fit-content;
 		width: 100vw;
 
-		.text_Box {
+	.text_Box {
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			font-size: var(--font);
 			margin: var(--qtr_marg);
 			gap: 3px;
-		}
+	}
 
         	@media only screen and (min-width: 980px) {
+                
 		.text_Box {
-			display: flex;
-			align-items: center;
-			justify-content: center;
 			font-size: var(--f_lg);
 			margin: var(--full_marg);
+            padding: 2vh 5vw;
 			gap: 8px;
 		}
+
+        .cut_Box{
+            			padding: 2vh 10vw;
+        }
 	}
 	}
 
@@ -149,3 +204,9 @@
     }
 }
 
+//Highlights
+
+.alt_Color {
+        background-color: var(--extra);
+		color: var(--back_Main);
+	}

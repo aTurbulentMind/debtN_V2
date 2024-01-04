@@ -23,16 +23,22 @@
 
 <!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
-	h1,
-	h3 {
-		width: fit-content;
-		position: flex;
-		padding: 10vh 0 10vh 15vw;
+	.text_Block {
+		width: 90vw;
+		margin-left: 2.5vw;
+
+		ul {
+			padding: 1vh 0 10vh 15vw;
+			list-style-type: none;
+			font-size: var(--font);
+		}
 	}
 
-	ul {
-		padding: 1vh 0 10vh 15vw;
-		list-style-type: none;
-		font-size: var(--f_m);
+	@media only screen and (min-width: 980px) {
+		ul {
+			padding: 1vh 0 10vh 15vw;
+			list-style-type: none;
+			font-size: var(--f_m);
+		}
 	}
 </style>
