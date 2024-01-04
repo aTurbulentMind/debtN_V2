@@ -42,24 +42,38 @@
 		Debt$Net® technical support plans suit different purposes. Initial Purchase Support provides 90
 		days of technical phone support and comes as part of the purchase price of Debt$Net®.
 	</p>
-	<br />
+	<br /> <br />
 	<a class="bordt" href="/services/support/">Support</a>
+	<br /> <br />
 	<p class="text_Box cut_Box">
 		Debt$Net® technical support plans suit different purposes. Initial Purchase Support provides 90
 		days of technical phone support and comes as part of the purchase price of Debt$Net®.
 	</p>
+	<br />
 	<a class="bordt" href="/services/training/">Training</a>
 </div>
 
 <!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
 	a {
-		margin-left: 35vw;
+		margin: 5vh 35vw;
 		font-size: var(--f_lg);
 	}
 
 	.bordt {
 		border-top: var(--bord);
 		border-bottom: var(--bord);
+
+		margin: 5vh 35vw;
+	}
+
+	@media only screen and (min-width: 1280px) {
+		.text_Block {
+			margin-bottom: 10vh;
+
+			.bordt {
+				font-size: var(--f_lg);
+			}
+		}
 	}
 </style>

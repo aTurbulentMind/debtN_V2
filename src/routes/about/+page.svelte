@@ -255,6 +255,7 @@
 			.img_Face {
 				img {
 					width: 60%;
+					height: 100%;
 					margin: 0 20%;
 				}
 			}
@@ -275,8 +276,7 @@
 
 	@media only screen and (min-width: 1280px) {
 		img_Intro {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
+			display: flex;
 
 			img {
 				height: 100vh;
@@ -284,7 +284,9 @@
 
 			.text_Box {
 				width: 40vw;
-				margin: 20vh 2vw;
+				margin: 0;
+				padding: 0;
+				z-index: 999;
 			}
 		}
 
@@ -297,7 +299,11 @@
 		}
 
 		.overLay {
-			margin-top: -60vh;
+			margin-top: -50vh;
+		}
+
+		workforce {
+			margin-top: 30vh;
 		}
 	}
 </style>

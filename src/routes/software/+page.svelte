@@ -707,42 +707,6 @@
 			}
 		}
 
-		.add-ons {
-			margin: 20vh 25vw;
-			list-style-type: none;
-			width: 50vw;
-
-			.pwrSelected,
-			.selected {
-				border: var(--bord);
-				border-radius: var(--rad);
-				background-color: var(--back_Alt);
-				color: var(--back_Main);
-			}
-
-			li {
-				font-size: var(--f_lg);
-				padding: 1%;
-				margin: 2vh 0;
-				background-color: var(--highlight);
-				border: var(--bord);
-				border-radius: var(--rad);
-				cursor: pointer;
-				width: fit-content;
-
-				p {
-					font-size: var(--f_m);
-					padding: 2%;
-					margin: 0 8vw;
-					cursor: default;
-				}
-			}
-
-			.hidden {
-				display: none;
-			}
-		}
-
 		.grid {
 			grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
 			grid-template-rows: repeat(auto-fit, minmax(220px, 1fr));

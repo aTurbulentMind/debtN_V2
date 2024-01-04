@@ -97,14 +97,16 @@
 
 <ul class="add-ons">
 	{#each items as item (item.name)}
-		<li
-			class={selected === item.name ? 'selected' : 'unselected'}
-			on:click={() => select(item.name)}
-		>
-			{item.name}
-			<p class={selected === item.name ? '' : 'hidden'}>
-				{item.text}
-			</p>
+		<li>
+			<button
+				class={selected === item.name ? 'selected' : 'unselected'}
+				on:click={() => select(item.name)}
+			>
+				{item.name}
+				<p class={selected === item.name ? '' : 'hidden'}>
+					{item.text}
+				</p>
+			</button>
 		</li>
 	{/each}
 </ul>

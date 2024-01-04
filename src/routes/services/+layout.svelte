@@ -63,6 +63,8 @@
 
 			ul {
 				position: fixed;
+				display: inline;
+				transform: rotate(0deg);
 				margin: 50vh 2vw;
 				width: 8vw;
 				border-right: 1px solid var(--back_Hallow);
@@ -70,6 +72,7 @@
 				li {
 					list-style: none;
 					cursor: pointer;
+					border-right: none;
 				}
 			}
 		}

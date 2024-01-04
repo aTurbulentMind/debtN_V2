@@ -14,7 +14,6 @@
 </script>
 
 <meni>
-	<!-- Side menu -->
 	<div>
 		<ul>
 			{#each menuItems as item (item)}
@@ -65,7 +64,7 @@
 				position: fixed;
 				display: inline;
 				transform: rotate(0deg);
-				margin: 50vh 2vw;
+				margin: 50vh 0;
 				width: 8vw;
 				border-right: 1px solid var(--back_Hallow);
 
