@@ -14,44 +14,51 @@
 	<nav class:open={isMenuOpen}>
 		<!--this is the main navigation menu-->
 		<ul>
-			<li on:click={() => (isMenuOpen = false)} on:keydown={() => (isMenuOpen = false)}>
-				<a class:current={current === 0} on:click={() => (current = 0)} href="/software/"
-					>Software</a
-				>
+			<li>
+				<button on:click={() => (isMenuOpen = false)} on:keydown={() => (isMenuOpen = false)}>
+					<a class:current={current === 0} on:click={() => (current = 0)} href="/software/"
+						>Software</a
+					>
+				</button>
 			</li>
-			<li on:click={() => (isMenuOpen = false)} on:keydown={() => (isMenuOpen = false)}>
-				<a class:current={current === 1} on:click={() => (current = 1)} href="/reviews/">Reviews</a>
+			<li>
+				<button on:click={() => (isMenuOpen = false)} on:keydown={() => (isMenuOpen = false)}>
+					<a class:current={current === 1} on:click={() => (current = 1)} href="/reviews/"
+						>Reviews</a
+					>
+				</button>
 			</li>
-			<li on:click={() => (isMenuOpen = false)} on:keydown={() => (isMenuOpen = false)}>
-				<a class:current={current === 2} on:click={() => (current = 2)} href="/Contact/">Contact</a>
+			<li>
+				<button on:click={() => (isMenuOpen = false)} on:keydown={() => (isMenuOpen = false)}>
+					<a class:current={current === 2} on:click={() => (current = 2)} href="/Contact/"
+						>Contact</a
+					>
+				</button>
 			</li>
-			<li
-				on:click={() => (isMenuOpen = false)}
-				on:keydown={() => (isMenuOpen = false)}
-				class="space"
-			>
-				<a class:current={current === 3} on:click={() => (current = 3)} href="/about/">About</a>
+			<li>
+				<button on:click={() => (isMenuOpen = false)} on:keydown={() => (isMenuOpen = false)}>
+					<a class:current={current === 3} on:click={() => (current = 3)} href="/about/">About</a>
+				</button>
 			</li>
-			<li
-				on:click={() => (isMenuOpen = false)}
-				on:keydown={() => (isMenuOpen = false)}
-				class="space"
-			>
-				<a class:current={current === 4} on:click={() => (current = 4)} href="/services">Services</a
-				>
+			<li>
+				<button on:click={() => (isMenuOpen = false)} on:keydown={() => (isMenuOpen = false)}>
+					<a class:current={current === 4} on:click={() => (current = 4)} href="/services"
+						>Services</a
+					>
+				</button>
 			</li>
-			<li
-				on:click={() => (isMenuOpen = false)}
-				on:keydown={() => (isMenuOpen = false)}
-				class="space"
-			>
-				<a class:current={current === 5} on:click={() => (current = 5)} href="/">Home</a>
+			<li>
+				<button on:click={() => (isMenuOpen = false)} on:keydown={() => (isMenuOpen = false)}>
+					<a class:current={current === 5} on:click={() => (current = 5)} href="/">Home</a>
+				</button>
 			</li>
 		</ul>
 	</nav>
-	<div class="burger" on:click={toggleMenu} on:keydown={() => (isMenuOpen = false)}>
-		<svg> <Mail_Svg /></svg>
-	</div>
+	<button on:click={toggleMenu} on:keydown={() => (isMenuOpen = false)}>
+		<div class="burger">
+			<svg> <Mail_Svg /></svg>
+		</div>
+	</button>
 </div>
 
 <!-- svelte-ignore css-unused-selector -->
@@ -84,6 +91,7 @@
 	}
 
 	.logo {
+		margin: 1%;
 		h1 {
 			font-size: var(--f_lg);
 			margin: var(--marg);
@@ -92,6 +100,10 @@
 
 	ul {
 		flex-direction: row;
+	}
+
+	button {
+		all: unset;
 	}
 
 	@media only screen and (max-width: 767px) {
@@ -115,7 +127,7 @@
 
 	.logo {
 		h1 {
-			font-size: var(--f_m);
+			font-size: var(--font);
 		}
 	}
 
@@ -131,6 +143,9 @@
 		font-size: var(--font);
 
 		li {
+			button {
+				all: unset;
+			}
 			p {
 				margin-top: 1vh;
 				margin-bottom: 1vh;

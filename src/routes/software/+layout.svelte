@@ -17,8 +17,10 @@
 	<div>
 		<ul>
 			{#each menuItems as item (item)}
-				<li class={selected === item ? 'selected' : ''} on:click={() => select(item)}>
-					{item}
+				<li>
+					<button class={selected === item ? 'selected' : ''} on:click={() => select(item)}>
+						{item}
+					</button>
 				</li>
 			{/each}
 		</ul>
@@ -32,6 +34,10 @@
 
 <!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
+	button {
+		all: unset;
+	}
+
 	meni {
 		display: flex;
 
