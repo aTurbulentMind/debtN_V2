@@ -34,6 +34,14 @@
 		}
 	}
 
+	.add-ons {
+		li,
+		button,
+		p {
+			cursor: pointer;
+		}
+	}
+
 	@media only screen and (min-width: 980px) {
 		ul {
 			padding: 1vh 0 10vh 15vw;

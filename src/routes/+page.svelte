@@ -1,5 +1,5 @@
 <script>
-	import jumpPull from '$lib/assets/imgNum8.jpg';
+	import jumpPull from '$lib/assets/Fall.jpg';
 
 	import Ribbon_Svg from '$lib/svg/ribbon_Svg.svelte';
 	import Shield_Svg from '$lib/svg/shield_Svg.svelte';
@@ -153,7 +153,7 @@
 	.hero {
 		display: flex;
 		position: relative;
-		background-image: url('$lib/assets/imgNum7.jpg');
+		background-image: url('$lib/assets/Mt.jpg');
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-position: center;
@@ -364,7 +364,7 @@
 		}
 
 		.text_Block {
-			height: 100vh;
+			height: 110vh;
 			margin-bottom: 0;
 
 			.overLay {
@@ -372,7 +372,7 @@
 				position: absolute;
 				width: 40vw;
 				right: 2.5vw;
-				margin-top: -90vh;
+				margin-top: -100vh;
 
 				p {
 					margin-top: 3vh;
@@ -380,6 +380,14 @@
 
 				a {
 					font-size: var(--f_xl);
+				}
+			}
+
+			.img_Half {
+				margin: 5vh 0;
+				img {
+					width: 40vw;
+					margin-bottom: 2vh;
 				}
 			}
 		}

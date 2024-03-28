@@ -1,6 +1,6 @@
 <script>
-	import Left_Eye from '$lib/assets/imgNum2.jpg';
-	import Right_Eye from '$lib/assets/imgNum9.jpg';
+	import Left_Eye from '$lib/assets/PowerLOGO.jpg';
+	import Right_Eye from '$lib/assets/PrestigeLOGO.jpg';
 
 	let focused = ' ';
 	let focusElement = (id) => (focused = id);
@@ -649,6 +649,14 @@
 
 	.compari {
 		margin: 5vh auto;
+	}
+
+	.add-ons {
+		li,
+		button,
+		p {
+			cursor: pointer;
+		}
 	}
 
 	@media only screen and (min-width: 980px) {

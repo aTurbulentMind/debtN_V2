@@ -117,6 +117,14 @@
 		grid-template-columns: 1fr;
 	}
 
+	.add-ons {
+		li,
+		button,
+		p {
+			cursor: pointer;
+		}
+	}
+
 	@media only screen and (min-width: 980px) {
 		.add-ons {
 			grid-template-columns: 1fr 1fr 1fr;

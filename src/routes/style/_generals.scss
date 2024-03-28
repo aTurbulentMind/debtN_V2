@@ -43,6 +43,14 @@
         color: var(--highlight);
     }
 
+    	.add-ons {
+		li,
+		button,
+		p {
+			cursor: pointer;
+		}
+	}
+
 
 
     @media (min-width: 740px) {

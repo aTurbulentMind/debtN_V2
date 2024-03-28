@@ -3,8 +3,8 @@
 	import Tony from '$lib/assets/tony.jpg';
 	import Justin from '$lib/assets/justin.jpg';
 	import Julee from '$lib/assets/julee.jpg';
-	import Jungle from '$lib/assets/jungle.jpg';
-	import Richrich from '$lib/assets/richrichrich.jpg';
+	import Jungle from '$lib/assets/Valley.jpg';
+	import Richrich from '$lib/assets/Cover.jpg';
 
 	let items = [
 		{
@@ -198,8 +198,7 @@
 	img_Intro {
 		img {
 			object-fit: cover;
-			height: 100vh;
-			width: 100vw;
+			width: 55vw;
 		}
 	}
 
@@ -229,6 +228,19 @@
 		object-fit: cover;
 		height: 100vh;
 		width: 100vw;
+	}
+
+	.add-ons {
+		li,
+		button,
+		p {
+			cursor: pointer;
+		}
+	}
+
+	.selected {
+		background-color: var(--back_Alt);
+		color: var(--back_Main);
 	}
 
 	@media only screen and (min-width: 980px) {
