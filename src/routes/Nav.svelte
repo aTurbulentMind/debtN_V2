@@ -1,5 +1,7 @@
 <script>
 	import Mail_Svg from '../lib/svg/mail_Svg.svelte';
+
+	import DNLogo from '$lib/assets/DebtNetclear.png';
 	let isMenuOpen = false;
 
 	function toggleMenu() {
@@ -10,7 +12,7 @@
 </script>
 
 <div class="navbar">
-	<a href="/" class="logo">DEBT$NET</a>
+	<a href="/" class="logo"><img src={DNLogo} alt="" /></a>
 	<nav class:open={isMenuOpen}>
 		<!--this is the main navigation menu-->
 		<ul>
@@ -91,10 +93,11 @@
 	}
 
 	.logo {
-		margin: 1%;
-		h1 {
-			font-size: var(--f_lg);
-			margin: var(--marg);
+		img {
+			width: 20rem;
+			margin-left: 1vw;
+			background-color: var(--back_Main);
+			border-radius: var(--rad);
 		}
 	}
 
@@ -205,7 +208,7 @@
 		}
 
 		.space {
-			margin-right: 2vw;
+			margin-right: 1vw;
 		}
 	}
 

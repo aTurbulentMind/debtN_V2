@@ -1,5 +1,6 @@
 <script>
 	import jumpPull from '$lib/assets/Fall.jpg';
+	import DNLogo from '$lib/assets/DebtNetclear.png';
 
 	import Ribbon_Svg from '$lib/svg/ribbon_Svg.svelte';
 	import Shield_Svg from '$lib/svg/shield_Svg.svelte';
@@ -11,7 +12,7 @@
 
 <div class="hero">
 	<div class="hero_Background" />
-	<h1 class="glass_Back">DEBT$net</h1>
+	<h1><img src={DNLogo} alt="" /></h1>
 	<p class="glass_Back">
 		"Empowering Financial Recovery for Over 45 years: Your Trusted Partner in Ethical Debt
 		Collection. Navigate the Path to Financial Resilience with Us."
@@ -124,18 +125,18 @@
 
 <div class="text_Block alt_Color">
 	<p class="text_Box">
-		Our commitment to exceptional taste starts with the careful selection of natural, high-quality
-		ingredients. We believe that great pizza begins with the finest elements, and that's why we
-		source locally whenever possible. From the rich, vine-ripened tomatoes in our savory sauce to
-		the premium, locally-sourced cheeses that blanket our dough, each ingredient is chosen with care
-		and consideration.
+		Founded in 1987 by principals Tony LaMagna and Gary Grout, the company has developed and
+		provides the industry their premier core product, Debt$Net®, as well as supporting software
+		modules, training, custom programming and technical support.
 	</p>
 
 	<p class="text_Box">
-		Our passion to natural goodness isn't just about taste; it's about providing you with a dining
-		experience that is fresh, wholesome, and free from unnecessary additives. Every slice is a
-		testament to our dedication to crafting pizzas that not only delight your taste buds but also
-		nourish your body with the goodness that only natural ingredients can provide.
+		Debt$Net®, created by The Computer Manager, Inc., has provided collection agencies, law firms,
+		debt buyers and in-house collection departments with one of the most comprehensive debt
+		collection systems in the industry. Proven in the field, Debt$Net® collection software has
+		satisfied the debt recovery requirements for over 1,000 companies specializing in Retail,
+		Commercial, Medical, Receivables Management and Check Collections. Debt$Net® users can be found
+		throughout the United States and Canada.
 	</p>
 
 	<p class="text_Box">
@@ -164,10 +165,15 @@
 
 		h1 {
 			position: absolute;
-			top: 10vh;
-			left: 5vw;
-			font-size: var(--f_lg);
-			text-transform: uppercase;
+			top: 0;
+			left: 0;
+
+			img {
+				position: absolute;
+				top: 3vh;
+				left: 37vw;
+				width: 50vw;
+			}
 		}
 
 		p {
