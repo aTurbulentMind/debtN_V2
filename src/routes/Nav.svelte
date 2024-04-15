@@ -1,5 +1,5 @@
 <script>
-	import Mail_Svg from '../lib/svg/mail_Svg.svelte';
+	import Dollar_Svg from '../lib/svg/money_Svg.svelte';
 
 	import DNLogo from '$lib/assets/DebtNetclear.png';
 	let isMenuOpen = false;
@@ -58,7 +58,7 @@
 	</nav>
 	<button on:click={toggleMenu} on:keydown={() => (isMenuOpen = false)}>
 		<div class="burger">
-			<svg> <Mail_Svg /></svg>
+			<svg> <Dollar_Svg /></svg>
 		</div>
 	</button>
 </div>
@@ -94,7 +94,8 @@
 
 	.logo {
 		img {
-			width: 20rem;
+			width: 40vw;
+			padding: 3%;
 			margin-left: 1vw;
 			background-color: var(--back_Main);
 			border-radius: var(--rad);
@@ -174,11 +175,10 @@
 	}
 
 	.burger {
-		height: 30px;
-		width: 30px;
+		height: 25%;
+		width: 50%;
 		aspect-ratio: 1;
 		background-color: transparent;
-		margin-top: 1vh;
 		margin-right: 6vw;
 		display: flex;
 		align-items: center;

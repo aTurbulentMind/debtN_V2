@@ -54,24 +54,13 @@
 
 .add-ons {
 		display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
 		list-style-type: none;
 		width: 80vw;
-		margin: 2vw 15vw;
-
-
-		.selected {
-			border-radius: var(--rad);
-			background-color: var(--back_Main);
-			color: var(--text_Main);
-		}
-
-		.unselected {
-			height: fit-content;
-		}
+		margin: 2vw 10vw;
 
 		li {
-			background-color: var(--back_Main);
+			background-color: var(--back_Alt);
 			border: var(--bord);
 			border-radius: var(--rad);
 			font-size: var(--f_lg);
@@ -86,7 +75,8 @@
 			background: transparent;
 			border: none;
 			font-size: var(--f_m);
-			color: var(--text_Main);
+			color: var(--back_Main);
+            padding: 0;
 		}
 
 			p {
@@ -95,11 +85,29 @@
 				margin: 5% 0;
 				cursor: default;
 			}
+
+        .selected {
+			border-radius: var(--rad);
+			background-color: var(--back_Main);
+			color: var(--text_Main);
+		}
+
+		.unselected {
+			height: fit-content;
+		}
 		}
 
 		.hidden {
 			display: none;
 		}
+
+        @media only screen and (min-width: 780px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media only screen and (min-width: 1080px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
 
         	@media only screen and (min-width: 1280px) {
                 .selected{
@@ -113,7 +121,6 @@
 
 
 //blurred background
-
 .glass_Back{
     background: var(--back_Hallow);
     color: var(--back_Main);
@@ -157,6 +164,7 @@
             }
         }
 }
+
 
 //text blocks
 .text_Block {
@@ -216,7 +224,6 @@
 }
 
 //Highlights
-
 .alt_Color {
         background-color: var(--extra);
 		color: var(--back_Main);

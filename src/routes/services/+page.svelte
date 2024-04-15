@@ -4,25 +4,33 @@
 	<p class="text_Box cut_Box">
 		Software Evaluation Support The evaluation of collection agency software breaks down into these
 		basic steps:
-		<br />
-		Agency Requirements Analysis<br />
-		Preliminary Market Canvas<br />
-		Comprehensive Software Feature Analysis<br />
+		<br /><br />
+		Agency Requirements Analysis<br /><br />
+		Preliminary Market Canvas<br /><br />
+		Comprehensive Software Feature Analysis<br /><br />
 		Company Investigation of Software Vendors<br />
 	</p>
 
 	<p class="text_Box cut_Box">
 		Determine agency requirements by examining agency operations. Since most software will cover
 		"normal" business practices, you will want to pay close attention to specialized functions of
-		your agency. The evaluation should review the categories of collections your agency pursues
-		(retail, medical, checks, commercial) including specialized markets such as debt buying and
-		student loans. Closely examine special and priority client requirements, agency financial deals,
-		reporting and automated processes. Daily operations, such as data entry, payment processing,
-		skip tracing, legal processing, notice generation and credit reports should be reviewed. Review
-		accounting practices such as statements, trust accounting, month end processes, activity
-		tracking, collector compensation and auditing. High-profile problems the agency is currently
-		trying to resolve should be considered at this time as well. You will want to think about the
-		growth plan of the agency and evaluate the adequacy of your existing equipment.
+		your agency. The evaluation should:
+		<br /><br />
+		Review the categories of collections your agency pursues (retail, medical, checks, commercial) including
+		specialized markets such as debt buying and student loans.
+		<br /><br />
+		Closely examine special and priority client requirements, agency financial deals, reporting and automated
+		processes.
+		<br /><br />
+		Daily operations, such as data entry, payment processing, skip tracing, legal processing, notice
+		generation and credit reports should be reviewed.
+		<br /><br />
+		Review accounting practices such as statements, trust accounting, month end processes, activity tracking,
+		collector compensation and auditing.
+		<br /><br />
+		High-profile problems the agency is currently trying to resolve should be considered at this time
+		as well. You will want to think about the growth plan of the agency and evaluate the adequacy of
+		your existing equipment.
 	</p>
 	<p class="text_Box cut_Box">
 		To choose the best software, start with a preliminary market canvas to identify top candidates

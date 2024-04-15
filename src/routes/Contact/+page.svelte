@@ -83,7 +83,7 @@
 	.head_Line {
 		background: var(--back_Main);
 		z-index: 901;
-		margin: 8vh 0 -13.7vh 24vw;
+		margin: 8vh auto;
 		font-size: var(--f_sm);
 		border-radius: var(--rad);
 		border: var(--bord);

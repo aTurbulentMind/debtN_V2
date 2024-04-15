@@ -198,7 +198,7 @@
 	img_Intro {
 		img {
 			object-fit: cover;
-			width: 55vw;
+			width: 100vw;
 		}
 	}
 
@@ -230,20 +230,21 @@
 		width: 100vw;
 	}
 
-	.add-ons {
-		li,
-		button,
-		p {
-			cursor: pointer;
-		}
-	}
-
 	.selected {
 		background-color: var(--back_Alt);
 		color: var(--back_Main);
 	}
 
-	@media only screen and (min-width: 980px) {
+	@media only screen and (min-width: 740px) {
+		img_Intro {
+			img {
+				object-fit: cover;
+				width: 55vw;
+			}
+		}
+	}
+
+	@media only screen and (min-width: 1080px) {
 		img_Intro {
 			display: grid;
 			grid-template-columns: 1fr 1fr;

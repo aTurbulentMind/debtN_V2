@@ -2,6 +2,15 @@
 	import Left_Eye from '$lib/assets/PowerLOGO.jpg';
 	import Right_Eye from '$lib/assets/PrestigeLOGO.jpg';
 
+	import { onMount } from 'svelte';
+
+	let activeTab = 'power'; // Set default active tab
+
+	// Function to switch active tab
+	function switchTab(tab) {
+		activeTab = tab;
+	}
+
 	let focused = ' ';
 	let focusElement = (id) => (focused = id);
 
@@ -67,395 +76,250 @@
 	</p>
 </div>
 
-<div class="img_container">
-	<button
-		class={focused === 'img_Left' ? 'focused' : 'unfocused'}
-		on:click={() => focusElement('img_Left')}
-	>
-		<img src={Left_Eye} alt="money graph" />
-		<p>
-			PowerS
-			<br /> <br />
-			Debt$Net® Power, the flagship product from Debt$Net® Collection Software, has served collection
-			agencies for over 20 years. Now enhanced with more features, it provides a high-performance local
-			area network system with cost-effective, modular design. Delivering unmatched value, it ensures
-			business success with low start-up and maintenance costs. Explore Debt$Net® Power's comprehensive
-			features for a closer look at its capabilities.
-		</p>
-	</button>
+<div class="tab-container">
+	<!-- Power tab -->
+	<div class="tab {activeTab === 'power' ? 'active' : ''}" on:click={() => switchTab('power')}>
+		Power
+	</div>
 
-	<button
-		class={focused === 'img_Right' ? 'focused' : 'unfocused'}
-		on:click={() => focusElement('img_Right')}
+	<!-- Prestige tab -->
+	<div
+		class="tab {activeTab === 'prestige' ? 'active' : ''}"
+		on:click={() => switchTab('prestige')}
 	>
-		<img src={Right_Eye} alt="background" />
-		<p>
-			Prestige 2023
-			<br /> <br />
-			Debt$Net® Prestige, the latest from Debt$Net® Collection Software, is a powerful SQL-based solution
-			designed for mid-sized to large agencies. Offering flexibility, business features, and robust security,
-			Prestige ensures unparalleled data integrity. With modular design and two decades of expertise,
-			it maximizes efficiency, guaranteeing production, profit, and top value.
-		</p>
-	</button>
+		Prestige
+	</div>
 </div>
 
-{#if focused === 'img_Left'}
-	<h3>PowerS Special Features</h3>
+<!-- Tab content -->
+{#if activeTab === 'power'}
+	<div class="tab-content">
+		<h3>PowerS Info</h3>
 
-	<div class="grid">
-		<div class="card">
-			<h2 class="card-title">Michael L</h2>
-			<br />
-			<div class="body">
-				I go here relatively often, and I'm always impressed. They have a great $6 deal, and their
-				pizzas are incredibly delicious. They always make sure to put a lot of toppings on, and the
-				prices are not bad for what you get. It's a relatively informal establishment, but I think
-				that adds to the charm. 10/10 pizza place.
-			</div>
+		<div class="text_Block">
+			<p class="text_Box cut_Box">
+				Debt$Net® Power is also premise based and licensed on a per user basis. This version of the
+				software is designed to optimize business operations on a local area network. Debt$Net®
+				Power starts at $4,000.
+			</p>
 		</div>
 
-		<div class="card">
-			<h2 class="card-title">Michael R</h2>
-			<br />
-			<div class="body">
-				We discovered this place last month, and we only get pizza from here now. The pizza is at a
-				better price than most chain pizza places, and the quality is better as well. I really like
-				that they have pizza sizes for all occasions to include a huge party size pizza. Update: You
-				don't need to know anything except this. I found this place a month ago, and now I refuse to
-				get pizza anywhere else. Price = Amazing Quality = Better than amazing
-			</div>
-		</div>
+		<h3>PowerS Special Features</h3>
 
-		<div class="card">
-			<h2 class="card-title">Jenny</h2>
-			<br />
-			<div class="body">
-				We where first timers the other night. I ordered the Veggie lovers and the chicken, bacon,
-				ranch. Man these pizzas where so good, zero complaints, they where loaded. The service was
-				great and everything was done correctly. Look forward to trying more of your menu.
-				Recommend!
+		<div class="grid">
+			<div class="card">
+				<h2 class="card-title">Feature-1</h2>
+				<br />
+				<div class="body">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium omnis laborum dicta
+					aut voluptatibus molestias totam voluptate molestiae iusto distinctio quis expedita dolor
+					nulla earum tenetur, temporibus, vitae fugiat dolorum pariatur? Vitae.
+				</div>
 			</div>
-		</div>
 
-		<div class="card glass_Back">
-			<h2 class="card-title">Larry</h2>
-			<br />
-			<div class="body">
-				Fairgrounds Pizza is amazing! I've tried a couple different kinds of there pizza but I
-				definitely recommend the Works! Toppings are great and so is the crust (which is a rare
-				combination) Currently my favorite local pizza place! Staff is courteous and professional!
+			<div class="card">
+				<h2 class="card-title">Feature-2</h2>
+				<br />
+				<div class="body">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis aspernatur porro enim
+					aliquam expedita iste distinctio odit laudantium non minima, quos amet recusandae
+					accusantium pariatur nisi sapiente temporibus?
+				</div>
 			</div>
-		</div>
 
-		<div class="card glass_Back">
-			<h2 class="card-title">Anna</h2>
-			<br />
-			<div class="body">
-				Great pizza! We were looking for traditional, affordable, cravable pizza (which we have
-				found surprisingly hard to find since we moved here) and definitely found it at Fairgrounds.
-				Delicious crust and cooked to perfect golden crispness 😋 Breadsticks are wonderful too! The
-				gentleman working last Saturday 2/4 was very accommodating and provided great customer
-				service too.
+			<div class="card">
+				<h2 class="card-title">Feature-3</h2>
+				<br />
+				<div class="body">
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis voluptatum nobis laborum
+					odio aperiam facere blanditiis fuga fugit inventore consectetur ab assumenda corrupti
+					maxime delectus vel beatae harum dolorem exercitationem ex, dicta, similique quisquam.
+					Eligendi minima reiciendis eos.
+				</div>
 			</div>
 		</div>
+		<h3>Add-ons</h3>
 
-		<div class="card glass_Back">
-			<h2 class="card-title">Noel</h2>
-			<br />
-			<div class="body">
-				THE BEST PIZZA IN KITSAP COUNTY!!! The cheese was perfect. The marinara was deculate. The
-				crust was nice and crisp. This will be the only pizza i'll ever order from now on. They have
-				made me see the light!!
-			</div>
-		</div>
+		<a class="eso" href="/software/eso">Extended Service Options</a>
+
+		<h3>PowerS System Reqs</h3>
+
+		<!-- Server Requirements Table -->
+		<table class="requirements-table">
+			<caption>Power Server Requirements</caption>
+			<thead>
+				<tr>
+					<th>Component</th>
+					<th>Minimum</th>
+					<th>Recommended</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Windows Operating System</td>
+					<td>Windows 7 or Higher</td>
+					<td>Server 2008 or Higher</td>
+				</tr>
+				<tr>
+					<td>Processor</td>
+					<td>1GHz or Faster</td>
+					<td>2GHz or Faster</td>
+				</tr>
+				<tr>
+					<td>RAM</td>
+					<td>8GB or Higher</td>
+					<td>16GB or Higher</td>
+				</tr>
+				<tr>
+					<td>Free HD Space</td>
+					<td>20GB or More</td>
+					<td>40GB or More</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<!-- Workstation Requirements Table -->
+		<table class="requirements-table">
+			<caption>Power Workstation Requirements</caption>
+			<thead>
+				<tr>
+					<th>Component</th>
+					<th>Minimum</th>
+					<th>Recommended</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Windows Operating System</td>
+					<td>Windows 7 or Higher</td>
+					<td>Windows 7 or Higher</td>
+				</tr>
+				<tr>
+					<td>Processor</td>
+					<td>1.0 GHz or Faster</td>
+					<td>2.0 GHz or Faster</td>
+				</tr>
+				<tr>
+					<td>RAM</td>
+					<td>2GB or Higher</td>
+					<td>4GB or Higher</td>
+				</tr>
+				<tr>
+					<td>Free HD Space</td>
+					<td>1.5GB or More</td>
+					<td>4GB or More</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
-
-	<h3>PowerS Info</h3>
-
-	<div class="text_Block">
-		<p class="text_Box cut_Box">
-			Debt$Net® Power is also premise based and licensed on a per user basis. This version of the
-			software is designed to optimize business operations on a local area network. Debt$Net® Power
-			starts at $4,000.
-		</p>
-	</div>
-
-	<h3>PowerS Add-ons</h3>
-
-	<ul class="add-ons">
-		{#each pwritems as pwrItem (pwrItem.pwrName)}
-			<li>
-				<button
-					class={pwrSelected === pwrItem.pwrName ? 'pwrSelected' : ''}
-					on:click={() => pwrSelect(pwrItem.pwrName)}
-				>
-					{pwrItem.pwrName}
-					<p class={pwrSelected === pwrItem.pwrName ? '' : 'hidden'}>
-						{pwrItem.text}
-					</p>
-				</button>
-			</li>
-		{/each}
-	</ul>
-
-	<h3>PowerS System Reqs</h3>
-
-	<!-- Server Requirements Table -->
-	<table class="requirements-table">
-		<caption>Power Server Requirements</caption>
-		<thead>
-			<tr>
-				<th>Component</th>
-				<th>Minimum</th>
-				<th>Recommended</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Windows Operating System</td>
-				<td>Windows 7 or Higher</td>
-				<td>Server 2008 or Higher</td>
-			</tr>
-			<tr>
-				<td>Processor</td>
-				<td>1GHz or Faster</td>
-				<td>2GHz or Faster</td>
-			</tr>
-			<tr>
-				<td>RAM</td>
-				<td>8GB or Higher</td>
-				<td>16GB or Higher</td>
-			</tr>
-			<tr>
-				<td>Free HD Space</td>
-				<td>20GB or More</td>
-				<td>40GB or More</td>
-			</tr>
-		</tbody>
-	</table>
-
-	<!-- Workstation Requirements Table -->
-	<table class="requirements-table">
-		<caption>Power Workstation Requirements</caption>
-		<thead>
-			<tr>
-				<th>Component</th>
-				<th>Minimum</th>
-				<th>Recommended</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Windows Operating System</td>
-				<td>Windows 7 or Higher</td>
-				<td>Windows 7 or Higher</td>
-			</tr>
-			<tr>
-				<td>Processor</td>
-				<td>1.0 GHz or Faster</td>
-				<td>2.0 GHz or Faster</td>
-			</tr>
-			<tr>
-				<td>RAM</td>
-				<td>2GB or Higher</td>
-				<td>4GB or Higher</td>
-			</tr>
-			<tr>
-				<td>Free HD Space</td>
-				<td>1.5GB or More</td>
-				<td>4GB or More</td>
-			</tr>
-		</tbody>
-	</table>
 {/if}
 
-{#if focused === 'img_Right'}
-	<h3>Prestige 2023 Features</h3>
-	<div class="grid">
-		<div class="card glass_Back">
-			<h2 class="card-title">Noel</h2>
-			<br />
-			<div class="body">
-				THE BEST PIZZA IN KITSAP COUNTY!!! The cheese was perfect. The marinara was deculate. The
-				crust was nice and crisp. This will be the only pizza i'll ever order from now on. They have
-				made me see the light!!
-			</div>
+{#if activeTab === 'prestige'}
+	<div class="tab-content">
+		<h3>Prestige 2023 Info</h3>
+
+		<div class="text_Block">
+			<p class="text_Box cut_Box">
+				Debt$Net® Prestige is premise based and licensed on a per user basis. This award-winning
+				collection software was developed with enterprise agencies in mind. It does require SQL
+				server software and starts at $6,000.
+			</p>
 		</div>
 
-		<div class="card glass_Back">
-			<h2 class="card-title">Larry</h2>
-			<br />
-			<div class="body">
-				Fairgrounds Pizza is amazing! I've tried a couple different kinds of there pizza but I
-				definitely recommend the Works! Toppings are great and so is the crust (which is a rare
-				combination) Currently my favorite local pizza place! Staff is courteous and professional!
-			</div>
-		</div>
+		<h3>Prestige 2023 Special Features</h3>
 
-		<div class="card glass_Back">
-			<h2 class="card-title">Anna</h2>
-			<br />
-			<div class="body">
-				Great pizza! We were looking for traditional, affordable, cravable pizza (which we have
-				found surprisingly hard to find since we moved here) and definitely found it at Fairgrounds.
-				Delicious crust and cooked to perfect golden crispness 😋 Breadsticks are wonderful too! The
-				gentleman working last Saturday 2/4 was very accommodating and provided great customer
-				service too.
-			</div>
-		</div>
+		<ul class="add-ons">
+			{#each items as item (item.name)}
+				<li>
+					<button
+						class={selected === item.name ? 'selected' : ''}
+						on:click={() => select(item.name)}
+					>
+						{item.name}
+						<p class={selected === item.name ? '' : 'hidden'}>
+							{item.text}
+						</p>
+					</button>
+				</li>
+			{/each}
+		</ul>
 
-		<div class="card">
-			<h2 class="card-title">Michael R</h2>
-			<br />
-			<div class="body">
-				We discovered this place last month, and we only get pizza from here now. The pizza is at a
-				better price than most chain pizza places, and the quality is better as well. I really like
-				that they have pizza sizes for all occasions to include a huge party size pizza. Update: You
-				don't need to know anything except this. I found this place a month ago, and now I refuse to
-				get pizza anywhere else. Price = Amazing Quality = Better than amazing
-			</div>
-		</div>
+		<h3>Prestige System Reqs</h3>
 
-		<div class="card">
-			<h2 class="card-title">Jenny</h2>
-			<br />
-			<div class="body">
-				We where first timers the other night. I ordered the Veggie lovers and the chicken, bacon,
-				ranch. Man these pizzas where so good, zero complaints, they where loaded. The service was
-				great and everything was done correctly. Look forward to trying more of your menu.
-				Recommend!
-			</div>
-		</div>
+		<!-- Server Requirements Table -->
+		<table class="requirements-table">
+			<caption>Prestige Server Requirements</caption>
+			<thead>
+				<tr>
+					<th>Component</th>
+					<th>Minimum</th>
+					<th>Recommended</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Windows Operating System</td>
+					<td>Windows 7 or Higher</td>
+					<td>Server 2008 or Higher</td>
+				</tr>
+				<tr>
+					<td>SQL Server</td>
+					<td>2005 Standard or Newer</td>
+					<td>2008 Standard or Newer</td>
+				</tr>
+				<tr>
+					<td>Processor</td>
+					<td>1GHz or Faster</td>
+					<td>2GHz or Faster</td>
+				</tr>
+				<tr>
+					<td>RAM</td>
+					<td>8GB or Higher</td>
+					<td>16GB or Higher</td>
+				</tr>
+				<tr>
+					<td>Free HD Space</td>
+					<td>20GB or More</td>
+					<td>40GB or More</td>
+				</tr>
+			</tbody>
+		</table>
 
-		<div class="card">
-			<h2 class="card-title">Michael L</h2>
-			<br />
-			<div class="body">
-				I go here relatively often, and I'm always impressed. They have a great $6 deal, and their
-				pizzas are incredibly delicious. They always make sure to put a lot of toppings on, and the
-				prices are not bad for what you get. It's a relatively informal establishment, but I think
-				that adds to the charm. 10/10 pizza place.
-			</div>
-		</div>
+		<!-- Workstation Requirements Table -->
+		<table class="requirements-table">
+			<caption>Prestige Workstation Requirements</caption>
+			<thead>
+				<tr>
+					<th>Component</th>
+					<th>Minimum</th>
+					<th>Recommended</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Windows Operating System</td>
+					<td>Windows 7 or Higher</td>
+					<td>Windows 7 or Higher</td>
+				</tr>
+				<tr>
+					<td>Processor</td>
+					<td>1.0 GHz or Faster</td>
+					<td>2.0 GHz or Faster</td>
+				</tr>
+				<tr>
+					<td>RAM</td>
+					<td>2GB or Higher</td>
+					<td>4GB or Higher</td>
+				</tr>
+				<tr>
+					<td>Free HD Space</td>
+					<td>2GB or More</td>
+					<td>5GB or More</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
-
-	<h3>Prestige 2023 Info</h3>
-
-	<div class="text_Block">
-		<p class="text_Box cut_Box">
-			Debt$Net® Prestige is premise based and licensed on a per user basis. This award-winning
-			collection software was developed with enterprise agencies in mind. It does require SQL server
-			software and starts at $6,000.
-		</p>
-	</div>
-
-	<h3>Prestige 2023 Special Features</h3>
-
-	<ul class="add-ons">
-		{#each items as item (item.name)}
-			<li>
-				<button class={selected === item.name ? 'selected' : ''} on:click={() => select(item.name)}>
-					{item.name}
-					<p class={selected === item.name ? '' : 'hidden'}>
-						{item.text}
-					</p>
-				</button>
-			</li>
-		{/each}
-	</ul>
-
-	<h3>Prestige System Reqs</h3>
-
-	<!-- Server Requirements Table -->
-	<table class="requirements-table">
-		<caption>Prestige Server Requirements</caption>
-		<thead>
-			<tr>
-				<th>Component</th>
-				<th>Minimum</th>
-				<th>Recommended</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Windows Operating System</td>
-				<td>Windows 7 or Higher</td>
-				<td>Server 2008 or Higher</td>
-			</tr>
-			<tr>
-				<td>SQL Server</td>
-				<td>2005 Standard or Newer</td>
-				<td>2008 Standard or Newer</td>
-			</tr>
-			<tr>
-				<td>Processor</td>
-				<td>1GHz or Faster</td>
-				<td>2GHz or Faster</td>
-			</tr>
-			<tr>
-				<td>RAM</td>
-				<td>8GB or Higher</td>
-				<td>16GB or Higher</td>
-			</tr>
-			<tr>
-				<td>Free HD Space</td>
-				<td>20GB or More</td>
-				<td>40GB or More</td>
-			</tr>
-		</tbody>
-	</table>
-
-	<!-- Workstation Requirements Table -->
-	<table class="requirements-table">
-		<caption>Prestige Workstation Requirements</caption>
-		<thead>
-			<tr>
-				<th>Component</th>
-				<th>Minimum</th>
-				<th>Recommended</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Windows Operating System</td>
-				<td>Windows 7 or Higher</td>
-				<td>Windows 7 or Higher</td>
-			</tr>
-			<tr>
-				<td>Processor</td>
-				<td>1.0 GHz or Faster</td>
-				<td>2.0 GHz or Faster</td>
-			</tr>
-			<tr>
-				<td>RAM</td>
-				<td>2GB or Higher</td>
-				<td>4GB or Higher</td>
-			</tr>
-			<tr>
-				<td>Free HD Space</td>
-				<td>2GB or More</td>
-				<td>5GB or More</td>
-			</tr>
-		</tbody>
-	</table>
 {/if}
-
-<div class="img_container">
-	<button
-		class={focused === 'img_Left' ? 'focused' : 'unfocused'}
-		on:click={() => focusElement('img_Left')}
-	>
-		<h3>PowerS</h3>
-	</button>
-
-	<button
-		class={focused === 'img_Right' ? 'focused' : 'unfocused'}
-		on:click={() => focusElement('img_Right')}
-	>
-		<h3>Prestige23</h3>
-	</button>
-</div>
 
 <h3>Comparison</h3>
 
@@ -547,6 +411,31 @@
 
 <!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
+	.tab-container {
+		display: flex;
+		justify-content: center; /* Center the tabs horizontally */
+	}
+
+	.tab {
+		cursor: pointer;
+		padding: 10px;
+		border: var(--bord);
+		border-radius: 5px 5px 0 0;
+	}
+
+	.tab.active {
+		background-color: var(--text_Alt);
+		border-bottom: 1px solid var(--text_Alt);
+	}
+
+	.tab-content {
+		margin: 0 10vw;
+		width: 80vw;
+
+		border-radius: var(--rad);
+		background-color: var(--text_Alt);
+	}
+
 	.img_container {
 		display: relative;
 		justify-content: space-around;
@@ -609,14 +498,19 @@
 	}
 
 	.add-ons {
-		width: 90vw;
-		margin: 2vw 5vw;
+		width: 80vw;
+		margin: 2vw 0;
+	}
+
+	.eso {
+		padding: 10vh 0 5vh 6vw;
 	}
 
 	.requirements-table {
 		width: 50vw;
 		border-collapse: collapse;
 		margin: 5vh 0 5vh 5vw;
+		background: var(--back_Main);
 
 		caption {
 			font-weight: bold;
@@ -649,14 +543,6 @@
 
 	.compari {
 		margin: 5vh auto;
-	}
-
-	.add-ons {
-		li,
-		button,
-		p {
-			cursor: pointer;
-		}
 	}
 
 	@media only screen and (min-width: 980px) {

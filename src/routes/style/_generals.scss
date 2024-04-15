@@ -14,13 +14,13 @@
 
     a {
     text-decoration: none;
-    color: var(--extra);
+    color: var(--back_Alt);
     font-weight: 500;
     z-index: 10;
 
     &:hover {
         transition: all 0.3s ease-in-out;
-        color: var(--grabber);
+        color: var(--extra);
         transform: scale(1.1);
         cursor: pointer;
         text-decoration: underline;
@@ -35,6 +35,11 @@
 		font-size: var(--f_lg);
 	}
 
+  p{
+    width: 75vw;
+		padding: 10vh 5vw 5vh 0;
+  }
+
     .overLay {
 		margin-top: -100vh;
 	}
@@ -43,10 +48,9 @@
         color: var(--highlight);
     }
 
-    	.add-ons {
+    .add-ons {
 		li,
-		button,
-		p {
+		button{
 			cursor: pointer;
 		}
 	}

@@ -181,7 +181,7 @@
 			top: 25vh;
 			left: 5vw;
 			width: 90vw;
-			font-size: var(--font);
+			font-size: var(--f_m);
 		}
 
 		form {
@@ -202,6 +202,7 @@
 				top: -5vh;
 				left: 0.01vw;
 				margin-top: 4.25vh;
+				padding: 0 5vw 0 0;
 			}
 
 			input {
@@ -210,7 +211,7 @@
 				width: 55vw;
 				height: 3vh;
 				font-size: var(--font);
-				margin-top: 3vh;
+				margin-top: 4vh;
 			}
 
 			.text_Message {
@@ -247,8 +248,8 @@
 			margin: 5vh auto;
 
 			svg {
-				width: 20vw;
-				margin: 1vh 35%;
+				width: 15vw;
+				margin: 1vh 40%;
 			}
 			.card-title {
 				font-size: var(--f_m);
@@ -267,9 +268,10 @@
 	}
 
 	.overLay {
+		margin: -120vh 0 20vh;
 		a {
 			font-size: var(--f_lg);
-			margin-bottom: 20vh;
+			margin-bottom: 25vh;
 		}
 	}
 
@@ -415,7 +417,7 @@
 		}
 	}
 
-	@media only screen and (min-width: 1280px) {
+	@media only screen and (min-width: 1285px) {
 		.hero {
 			p {
 				left: 5vw;
