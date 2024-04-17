@@ -2,8 +2,9 @@
 
 <div class="text_Block">
 	<p class="text_Box cut_Box">
-		Software Evaluation Support The evaluation of collection agency software breaks down into these
-		basic steps:
+		Software Evaluation:
+		<br />
+		Support The evaluation of collection agency software breaks down into these basic steps:
 		<br /><br />
 		Agency Requirements Analysis<br /><br />
 		Preliminary Market Canvas<br /><br />

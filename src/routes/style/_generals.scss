@@ -36,8 +36,9 @@
 	}
 
   p{
-    width: 75vw;
-		padding: 10vh 5vw 5vh 0;
+    width: 80vw;
+		padding: 10vh 0 5vh 0;
+    text-align: left;
   }
 
     .overLay {
@@ -46,6 +47,13 @@
 
     span{
         color: var(--highlight);
+    }
+
+    .add-ons{
+      p{
+        text-align: center;
+        padding: 3%;
+      }
     }
 
     .add-ons {

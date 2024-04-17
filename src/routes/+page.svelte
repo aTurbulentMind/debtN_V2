@@ -65,7 +65,7 @@
 		<svg><MoneyHand_Svg /></svg>
 		<br />
 		<div class="body">
-			Specialized knowledge and expertise in debt collection within specific industries..
+			Specialized knowledge and expertise in debt collection within specific industries.
 		</div>
 	</div>
 
@@ -203,6 +203,7 @@
 				left: 0.01vw;
 				margin-top: 4.25vh;
 				padding: 0 5vw 0 0;
+				text-align: left;
 			}
 
 			input {
