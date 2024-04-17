@@ -429,11 +429,14 @@
 	}
 
 	.tab-content {
-		margin: 0 10vw;
-		width: 80vw;
-
+		margin: 0 0 0 5vw;
+		width: 90vw;
 		border-radius: var(--rad);
 		background-color: var(--text_Alt);
+
+		p {
+			margin-right: 0;
+		}
 	}
 
 	.img_container {
@@ -531,13 +534,15 @@
 		}
 
 		td {
+			padding: 0 5%;
 			svg {
 				margin: 0 5vw 0 10vw;
 			}
 		}
 
 		tbody tr:nth-child(even) {
-			background-color: var(--text_Alt);
+			background-color: var(--back_Alt);
+			color: var(--back_Main);
 		}
 	}
 
