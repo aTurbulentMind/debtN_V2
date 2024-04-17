@@ -1,35 +1,10 @@
 <script>
-	import Left_Eye from '$lib/assets/PowerLOGO.jpg';
-	import Right_Eye from '$lib/assets/PrestigeLOGO.jpg';
-
-	import { onMount } from 'svelte';
-
 	let activeTab = 'power'; // Set default active tab
 
 	// Function to switch active tab
 	function switchTab(tab) {
 		activeTab = tab;
 	}
-
-	let focused = ' ';
-	let focusElement = (id) => (focused = id);
-
-	let pwritems = [
-		{
-			pwrName: 'pwr-Special Feature-1',
-			text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...'
-		},
-		{
-			pwrName: 'pwr-Special Feature-2',
-			text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit eaque blanditiis nam libero assumenda quod!'
-		},
-		{
-			pwrName: 'pwr-Special Feature-3',
-			text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit eaque blanditiis nam libero assumenda quod!'
-		}
-	];
-	let pwrSelected = 'pwr-Special Feature-1';
-	let pwrSelect = (pwrName) => (pwrSelected = pwrName);
 
 	let items = [
 		{
@@ -439,67 +414,6 @@
 		}
 	}
 
-	.img_container {
-		display: relative;
-		justify-content: space-around;
-		margin: 1vh 2.5vw 1vh 10vw;
-		width: 80vw;
-
-		.img_Left,
-		.img_Right {
-			transition: all 0.5s ease-in-out;
-		}
-
-		button {
-			border-radius: var(--rad);
-			cursor: pointer;
-
-			img {
-				width: 60vw;
-			}
-
-			p {
-				font-size: var(--f_m);
-				margin-top: 0;
-			}
-
-			h3 {
-				padding: 0;
-				margin: 0;
-			}
-		}
-
-		.focused {
-			background: var(--back_Alt);
-			color: var(--back_Main);
-			transform: scale(1);
-
-			h3 {
-				box-shadow: var(--box_Light);
-			}
-		}
-
-		.unfocused {
-			transform: scale(0.6);
-			background-color: var(--back_Tre);
-			color: var(--back_Main);
-			margin: 5vh 15vw;
-
-			h3 {
-				box-shadow: var(--box_Shadow);
-			}
-
-			p,
-			.text_Box {
-				display: none;
-			}
-		}
-
-		p {
-			padding: 3%;
-		}
-	}
-
 	.add-ons {
 		width: 80vw;
 		margin: 2vw 0;
@@ -550,62 +464,7 @@
 		margin: 5vh auto;
 	}
 
-	@media only screen and (min-width: 980px) {
-		.img_container {
-			width: 80vw;
-			margin: 0 15vw;
-			display: flex;
-			justify-content: space-around;
-
-			h2 {
-				font-size: var(--f_lg);
-			}
-
-			.img_Left,
-			.img_Right {
-				transition: all 0.5s ease;
-			}
-
-			button {
-				border-radius: var(--rad);
-				cursor: pointer;
-				h2 {
-					padding: var(--pad);
-				}
-
-				img {
-					width: 30vw;
-				}
-
-				p {
-					font-size: var(--f_m);
-					margin-top: 0;
-				}
-			}
-
-			.focused {
-				background: var(--back_Alt);
-				color: var(--back_Main);
-				transform: scale(1);
-				margin: 0 10vw;
-			}
-
-			.unfocused {
-				transform: scale(0.6);
-				background-color: var(--back_Tre);
-				color: var(--back_Main);
-				margin: 0 5vw;
-
-				p,
-				.text_Box {
-					display: none;
-				}
-			}
-			p {
-				padding: 3%;
-			}
-		}
-
+	@media only screen and (min-width: 426px) {
 		.grid {
 			grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
 			grid-template-rows: repeat(auto-fit, minmax(220px, 1fr));
@@ -644,6 +503,7 @@
 
 			tbody tr:nth-child(even) {
 				background-color: var(--text_Alt);
+				color: var(--text_Main);
 			}
 		}
 	}

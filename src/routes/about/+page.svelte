@@ -116,8 +116,8 @@
 		Inc., we value your confidence in Debt$Net® collection software.
 	</p>
 
-	<h2 class="wk">Workforce</h2>
 	<workforce>
+		<h2 class="wk">Workforce</h2>
 		<div class="img_Face">
 			<img src={Gary} alt="background" />
 		</div>
@@ -235,16 +235,27 @@
 		color: var(--back_Main);
 	}
 
-	@media only screen and (min-width: 740px) {
+	@media only screen and (min-width: 426px) {
 		img_Intro {
 			img {
 				object-fit: cover;
-				width: 55vw;
+				width: 100vw;
+			}
+		}
+
+		workforce {
+			margin-top: 50vh;
+			.img_Face {
+				img {
+					width: 80%;
+					height: 100%;
+					margin: 0 10%;
+				}
 			}
 		}
 	}
 
-	@media only screen and (min-width: 1080px) {
+	@media only screen and (min-width: 769px) {
 		img_Intro {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
@@ -287,7 +298,7 @@
 		}
 	}
 
-	@media only screen and (min-width: 1280px) {
+	@media only screen and (min-width: 1440px) {
 		img_Intro {
 			display: flex;
 

@@ -276,7 +276,8 @@
 		}
 	}
 
-	@media only screen and (min-width: 740px) {
+	// Tablet
+	@media only screen and (min-width: 426px) {
 		.hero {
 			height: 110vh;
 			h1 {
@@ -286,10 +287,14 @@
 			}
 
 			p {
-				top: 40vh;
-				left: 1vw;
+				top: 25vh;
+				left: 2vw;
 				margin: 0 3vw;
 				font-size: var(--f_m);
+			}
+
+			form {
+				left: 5vw;
 			}
 
 			a {
@@ -299,24 +304,27 @@
 		}
 
 		.grid {
-			margin: 15vh auto;
-			grid-template-rows: repeat(auto-fit, minmax(280px, 1fr));
-			grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+			margin: 10vh 2.5vw;
+			grid-template-columns: 1fr 1fr;
 			gap: 35px;
 
-			svg {
-				margin: 5% 35%;
+			.card {
+				svg {
+					width: 10vw;
+					margin: 5% 35%;
+				}
 			}
 		}
 
 		.alt_Color {
-			margin: 1.5vh 0;
-			height: 100vh;
+			margin: 0;
+			height: 115vh;
 			padding: 10vh 0;
 		}
 	}
 
-	@media only screen and (min-width: 980px) {
+	// Laptop
+	@media only screen and (min-width: 769px) {
 		.hero {
 			display: flex;
 			height: 100vh;
@@ -418,7 +426,7 @@
 		}
 	}
 
-	@media only screen and (min-width: 1285px) {
+	@media only screen and (min-width: 1440px) {
 		.hero {
 			p {
 				left: 5vw;
