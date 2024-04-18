@@ -49,8 +49,8 @@
 	</div>
 
 	<div class="card">
-		<svg><Doc_Svg /></svg>
 		<h2 class="card-title">Documentation</h2>
+		<svg><Doc_Svg /></svg>
 		<br />
 		<div class="body">
 			Access comprehensive resources. Explore our documentation for valuable insights on debt
@@ -96,10 +96,9 @@
 		}
 	}
 
-	@media only screen and (min-width: 980px) {
+	@media only screen and (min-width: 769px) {
 		.grid {
-			grid-template-columns: repeat(auto-fit, minmax(620px, 1fr));
-			grid-template-rows: repeat(auto-fit, minmax(420px, 1fr));
+			grid-template-columns: 1fr 1fr;
 			gap: var(--pad_xl);
 			position: relative;
 			margin-bottom: 6.9vh;

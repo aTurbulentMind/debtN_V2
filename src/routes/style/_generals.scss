@@ -65,14 +65,12 @@
 
 
 
-    @media (min-width: 740px) {
-      h1 {
-			padding: 18vh 0 5vh 46vw;
+    @media (min-width: 769px) {
+      h1, h3 {
+			padding: 18vh 0 5vh 26vw;
 		}
     }
 
-    @media (min-width: 980px) {
-    }
 
     @media (min-width: 1280px) {
     h1, h2, h3 {

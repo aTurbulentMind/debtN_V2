@@ -62,7 +62,7 @@
 		color: var(--back_Main);
 	}
 
-	@media (min-width: 980px) {
+	@media (min-width: 769px) {
 		meni {
 			display: flex;
 
@@ -78,6 +78,7 @@
 					list-style: none;
 					cursor: pointer;
 					border-right: none;
+					padding: 0 1vw;
 				}
 			}
 		}

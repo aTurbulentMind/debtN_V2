@@ -83,7 +83,7 @@
 	<img src={Jungle} alt="background" />
 
 	<div class="text_Block">
-		<p class="text_Box">
+		<p class="text_Box glass_Back">
 			Founded in 1987 by principals Tony LaMagna and Gary Grout, the company has developed and
 			provides the industry their premier core product, Debt$Net®, as well as supporting software
 			modules, training, custom programming and technical support.
@@ -115,65 +115,63 @@
 		staff provides a customized price quote package for your company's needs. At The Computer Manager,
 		Inc., we value your confidence in Debt$Net® collection software.
 	</p>
-
-	<workforce>
-		<h2 class="wk">Workforce</h2>
-		<div class="img_Face">
-			<img src={Gary} alt="background" />
-		</div>
-
-		<p class="text_Box glass_Back">
-			Gary Grout, Principal, Vice President, and Senior Systems Analyst's business and computer
-			science experience encompass more than 30 years of programming, analysis, and supervising. As
-			the Principal, Vice President, and Senior Systems Analyst for The Computer Manager, Inc., he
-			continually strives to provide their clients with software products that improve their
-			productivity and profitability. Gary's technical writing includes the book Business Computing
-			for Small Contractors (Osborne/McGraw-Hill, Berkeley, CA, 1986), and numerous articles and
-			reviews for such publications as PC Magazine and Creative Computing Magazine.The Computer
-			Sciences Corporation named him Employee of the Year for 1989 for his region.
-		</p>
-
-		<div class="img_Face">
-			<img src={Tony} alt="background" />
-		</div>
-
-		<p class="text_Box">
-			Anthony C. La Magna, Principal and Corporate Manager, has business experience including more
-			than 30 years of operating and managing businesses in the computer and construction
-			industries. Tony has had significant impact on profitability and growth as the managing
-			principal at The Computer Manager, growing the company from six employees to a top national
-			marketer of PC-based collection agency software. Mr. La Magna's computer experience includes
-			18 years as a principal of companies formed to provide accounting services to small business
-			and to provide consulting and programming services to both government and business clients. As
-			President and member of the Board of Directors of the local chapter of the Washington Home
-			Builders Association, Tony was voted Builder of the Year in 1984.
-		</p>
-
-		<div class="img_Face">
-			<img src={Julee} alt="background" />
-		</div>
-
-		<p class="text_Box glass_Back">
-			Julee Warner, Operations Manager, has been with The Computer Manager, Inc. for over 21 years.
-			Her experience with small group dynamic facilitation, business management, human resources,
-			curriculum development, and incorporating development strategies helps ensure successful
-			operations. She holds a Bachelor's degree in Multidisciplinary Studies from Eastern Oregon
-			University.
-		</p>
-
-		<div class="img_Face">
-			<img src={Justin} alt="background" />
-		</div>
-
-		<p class="text_Box">
-			Justin Brien, Technical Support Manager, has over 18 years experience resolving Debt$Net®
-			clients' technical issues and training new Debt$Net® users. He has extensive knowledge in
-			daily processes of a collection agency and collection department. Justin has a Bachelor's
-			degree in Business Administration – Management Information Systems from Western Washington
-			University.
-		</p>
-	</workforce>
 </div>
+<h2 class="wk">Workforce</h2>
+<workforce>
+	<div class="img_Face">
+		<img src={Gary} alt="background" />
+	</div>
+
+	<p class="text_Box">
+		Gary Grout, Principal, Vice President, and Senior Systems Analyst's business and computer
+		science experience encompass more than 30 years of programming, analysis, and supervising. As
+		the Principal, Vice President, and Senior Systems Analyst for The Computer Manager, Inc., he
+		continually strives to provide their clients with software products that improve their
+		productivity and profitability. Gary's technical writing includes the book Business Computing
+		for Small Contractors (Osborne/McGraw-Hill, Berkeley, CA, 1986), and numerous articles and
+		reviews for such publications as PC Magazine and Creative Computing Magazine.The Computer
+		Sciences Corporation named him Employee of the Year for 1989 for his region.
+	</p>
+
+	<div class="img_Face">
+		<img src={Tony} alt="background" />
+	</div>
+
+	<p class="text_Box">
+		Anthony C. La Magna, Principal and Corporate Manager, has business experience including more
+		than 30 years of operating and managing businesses in the computer and construction industries.
+		Tony has had significant impact on profitability and growth as the managing principal at The
+		Computer Manager, growing the company from six employees to a top national marketer of PC-based
+		collection agency software. Mr. La Magna's computer experience includes 18 years as a principal
+		of companies formed to provide accounting services to small business and to provide consulting
+		and programming services to both government and business clients. As President and member of the
+		Board of Directors of the local chapter of the Washington Home Builders Association, Tony was
+		voted Builder of the Year in 1984.
+	</p>
+
+	<div class="img_Face">
+		<img src={Julee} alt="background" />
+	</div>
+
+	<p class="text_Box">
+		Julee Warner, Operations Manager, has been with The Computer Manager, Inc. for over 21 years.
+		Her experience with small group dynamic facilitation, business management, human resources,
+		curriculum development, and incorporating development strategies helps ensure successful
+		operations. She holds a Bachelor's degree in Multidisciplinary Studies from Eastern Oregon
+		University.
+	</p>
+
+	<div class="img_Face">
+		<img src={Justin} alt="background" />
+	</div>
+
+	<p class="text_Box">
+		Justin Brien, Technical Support Manager, has over 18 years experience resolving Debt$Net®
+		clients' technical issues and training new Debt$Net® users. He has extensive knowledge in daily
+		processes of a collection agency and collection department. Justin has a Bachelor's degree in
+		Business Administration – Management Information Systems from Western Washington University.
+	</p>
+</workforce>
 
 <h2>Affiliates</h2>
 
@@ -195,6 +193,7 @@
 
 <!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
+	//Phone size / base
 	img_Intro {
 		img {
 			object-fit: cover;
@@ -235,6 +234,19 @@
 		color: var(--back_Main);
 	}
 
+	.add-ons {
+		grid-template-columns: 1fr;
+	}
+
+	.add-ons {
+		li,
+		button,
+		p {
+			cursor: pointer;
+		}
+	}
+
+	//Tablet size
 	@media only screen and (min-width: 426px) {
 		img_Intro {
 			img {
@@ -255,18 +267,18 @@
 		}
 	}
 
+	//Laptop size
 	@media only screen and (min-width: 769px) {
 		img_Intro {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-
 			img {
 				height: 100vh;
 			}
 			.text_Block {
+				margin: -85vh 2vw 0 10vw;
 				.text_Box {
-					width: 40vw;
-					margin: 10vh 2vw;
+					width: 80vw;
+					margin-top: 5vh;
+					z-index: 999;
 				}
 			}
 		}
@@ -275,14 +287,37 @@
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			gap: 1%;
+			margin-top: 30vh;
 
 			.img_Face {
 				img {
-					width: 60%;
-					height: 100%;
-					margin: 0 20%;
+					width: 40vw;
+					height: 60vh;
+					margin: 5vh 0;
 				}
 			}
+
+			.text_Box {
+				width: 40vw;
+				font-size: var(--f_m);
+			}
+		}
+
+		.add-ons {
+			grid-template-columns: 1fr 1fr;
+
+			button,
+			p {
+				width: 35vw;
+			}
+
+			p {
+				padding: 1%;
+			}
+		}
+
+		.text_Box {
+			margin-left: 5vw;
 		}
 
 		h2 {
@@ -292,12 +327,9 @@
 		.wk {
 			margin-top: 35vh;
 		}
-
-		workforce {
-			margin-top: 30vh;
-		}
 	}
 
+	//Lrg Screen
 	@media only screen and (min-width: 1440px) {
 		img_Intro {
 			display: flex;

@@ -329,24 +329,19 @@
 			display: flex;
 			height: 100vh;
 
-			h1 {
-				position: absolute;
-				left: 10vw;
-				font-size: var(--f_xxl);
-			}
-
 			p {
 				position: absolute;
-				left: 10vw;
+				left: 27.5vw;
+				top: 20vh;
 				width: 40vw;
-				font-size: var(--f_xl);
+				font-size: var(--f_lg);
 			}
 
 			form {
-				top: 40vh;
-				margin-left: 50vw;
-				width: 40vw;
-				height: 55vh;
+				top: 50vh;
+				margin-left: 10vw;
+				width: 70vw;
+				height: 50vh;
 
 				h2 {
 					font-size: var(--f_xl);
@@ -360,8 +355,8 @@
 				}
 
 				input {
-					right: 5vw;
-					width: 15vw;
+					right: -15vw;
+					width: 25vw;
 					height: 4vh;
 					margin-top: 0.5vh;
 					font-size: var(--f_lg);
@@ -373,23 +368,34 @@
 
 				button {
 					width: 10vw;
-					bottom: 5vh;
-					left: 15vw;
-					font-size: var(--f_xl);
+					bottom: 3vh;
+					left: 30vw;
+					font-size: var(--f_lg);
+				}
+			}
+		}
+
+		.grid {
+			margin: 15vh 10vw;
+
+			.card {
+				svg {
+					width: 10vw;
+					margin: 3vh 35%;
 				}
 			}
 		}
 
 		.text_Block {
-			height: 110vh;
+			height: 60vh;
 			margin-bottom: 0;
 
 			.overLay {
 				display: relative;
 				position: absolute;
-				width: 40vw;
-				right: 2.5vw;
-				margin-top: -100vh;
+				width: 80vw;
+				right: 10vw;
+				margin-top: -160vh;
 
 				p {
 					margin-top: 3vh;
@@ -403,26 +409,17 @@
 			.img_Half {
 				margin: 5vh 0;
 				img {
-					width: 40vw;
-					margin-bottom: 2vh;
+					width: 100vw;
+					margin-bottom: 5vh;
 				}
 			}
 		}
+
 		.alt_Color {
-			.text_Box {
-				padding-top: 15vh;
-			}
-		}
-
-		.grid {
-			margin: 15vh 10vw;
-
-			.card {
-				svg {
-					width: 5vw;
-					margin: 3vh 35%;
-				}
-			}
+			color: var(--text_Main);
+			background: var(--back_Main);
+			margin-top: 120vh;
+			margin-left: 10vw;
 		}
 	}
 

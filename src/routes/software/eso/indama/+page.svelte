@@ -58,4 +58,34 @@
 	.add-ons {
 		grid-template-columns: 1fr;
 	}
+
+	.add-ons {
+		li,
+		button,
+		p {
+			cursor: pointer;
+		}
+	}
+
+	@media (min-width: 426px) {
+	}
+
+	@media (min-width: 769px) {
+		.add-ons {
+			grid-template-columns: 1fr 1fr;
+
+			button,
+			p {
+				width: 35vw;
+			}
+
+			p {
+				padding: 1%;
+			}
+		}
+
+		.text_Box {
+			margin-left: 5vw;
+		}
+	}
 </style>

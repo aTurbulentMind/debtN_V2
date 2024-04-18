@@ -25,10 +25,8 @@
             }
 
             @media (min-width: 780px) {
-                .card {
                     padding: 20px;
                     margin: 0 12%;
-                }
         }
     }
     @media (min-width: 780px) {
@@ -41,7 +39,7 @@
         }
     }
 
-       @media (min-width: 980px) {
+    @media (min-width: 980px) {
 		.grid {
 			.card {
 				.body {

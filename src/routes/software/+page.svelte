@@ -386,6 +386,7 @@
 
 <!-- svelte-ignore css-unused-selector -->
 <style lang="scss">
+	//phone
 	.tab-container {
 		display: flex;
 		justify-content: center; /* Center the tabs horizontally */
@@ -505,6 +506,46 @@
 				background-color: var(--text_Alt);
 				color: var(--text_Main);
 			}
+		}
+	}
+
+	@media only screen and (min-width: 769px) {
+		.tab {
+			cursor: pointer;
+			padding: 10px;
+			border: var(--bord);
+			border-radius: 5px 5px 0 0;
+		}
+
+		.tab.active {
+			background-color: var(--text_Alt);
+			border-bottom: 1px solid var(--text_Alt);
+		}
+
+		.tab-content {
+			margin: 0 0 0 7vw;
+			width: 85vw;
+			border-radius: var(--rad);
+			background-color: var(--text_Alt);
+
+			p {
+				margin-right: 0;
+			}
+		}
+
+		.grid {
+			margin: 0 3vw;
+		}
+
+		.eso {
+			margin-left: 20vw;
+		}
+
+		.requirements-table {
+			width: 50vw;
+			border-collapse: collapse;
+			margin: 5vh 0 5vh 17vw;
+			background: var(--back_Main);
 		}
 	}
 </style>
