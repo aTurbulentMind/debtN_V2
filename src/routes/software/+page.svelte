@@ -531,6 +531,23 @@
 			p {
 				margin-right: 0;
 			}
+
+			.add-ons {
+				grid-template-columns: 1fr;
+				color: var(--text_Main);
+				text-align: center;
+
+				li,
+				button {
+					color: var(--text_Main);
+					width: 40vw;
+					background-color: transparent;
+				}
+
+				p {
+					width: 37vw;
+				}
+			}
 		}
 
 		.grid {

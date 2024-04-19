@@ -69,6 +69,7 @@
 		box-sizing: border-box;
 	}
 
+	//phone
 	nav {
 		display: none;
 	}
@@ -182,9 +183,7 @@
 		background-color: var(--back_Main);
 	}
 
-	@media only screen and (max-width: 768px) {
-	}
-
+	//laptop
 	@media only screen and (min-width: 769px) {
 		nav {
 			display: flex;
@@ -203,7 +202,7 @@
 
 			.logo {
 				img {
-					width: 10vw;
+					width: 15vw;
 					padding: 3%;
 					margin-left: 1vw;
 				}
@@ -211,12 +210,13 @@
 
 			ul {
 				flex-direction: row;
-				margin: 2vh -35vw 2vh 0;
+				margin: 2vh -20vw 2vh 0;
+			}
+
+			a {
+				font-size: var(--f_md);
 			}
 		}
-	}
-
-	@media only screen and (min-width: 769px) {
 	}
 
 	@media only screen and (min-width: 1440px) {
