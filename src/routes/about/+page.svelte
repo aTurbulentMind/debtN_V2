@@ -100,7 +100,7 @@
 	</div>
 </img_Intro>
 
-<h2>Sales Approach</h2>
+<h2 class="wk">Sales Approach</h2>
 <div class="text_Block">
 	<img class="backBack" src={Richrich} alt="background" />
 	<p class="text_Box cut_Box overLay glass_Back">
@@ -116,7 +116,9 @@
 		Inc., we value your confidence in Debt$Net® collection software.
 	</p>
 </div>
+
 <h2 class="wk">Workforce</h2>
+
 <workforce>
 	<div class="img_Face">
 		<img src={Gary} alt="background" />
@@ -332,17 +334,16 @@
 	//Lrg Screen
 	@media only screen and (min-width: 1440px) {
 		img_Intro {
-			display: flex;
-
 			img {
 				height: 100vh;
 			}
-
-			.text_Box {
-				width: 40vw;
-				margin: 0;
-				padding: 0;
-				z-index: 999;
+			.text_Block {
+				margin: -85vh 2vw 0 10vw;
+				.text_Box {
+					width: 80vw;
+					margin-top: 5vh;
+					z-index: 999;
+				}
 			}
 		}
 
@@ -358,8 +359,28 @@
 			margin-top: -50vh;
 		}
 
+		.wk {
+			margin-top: 60vh;
+		}
+
 		workforce {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1%;
 			margin-top: 30vh;
+
+			.img_Face {
+				img {
+					width: 40vw;
+					height: 60vh;
+					margin: 5vh 0;
+				}
+			}
+
+			.text_Box {
+				width: 40vw;
+				font-size: var(--f_lg);
+			}
 		}
 	}
 </style>

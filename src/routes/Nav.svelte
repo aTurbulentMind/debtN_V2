@@ -220,5 +220,23 @@
 	}
 
 	@media only screen and (min-width: 1440px) {
+		.navbar {
+			.logo {
+				img {
+					width: 10vw;
+					padding: 0;
+					margin-left: 1vw;
+				}
+			}
+
+			ul {
+				flex-direction: row;
+				margin: 2vh -40vw 2vh 0;
+			}
+
+			a {
+				font-size: var(--f_lg);
+			}
+		}
 	}
 </style>

@@ -150,7 +150,7 @@
 	:global(*) {
 		box-sizing: border-box;
 	}
-
+	//Phone
 	.hero {
 		display: flex;
 		position: relative;
@@ -423,38 +423,53 @@
 		}
 	}
 
+	//LgScrn
 	@media only screen and (min-width: 1440px) {
 		.hero {
+			h1 {
+				img {
+					left: 0;
+					padding: 0;
+					margin: 0;
+				}
+			}
+
 			p {
-				left: 5vw;
+				top: 45vh;
+				left: 4vw;
 				width: 40vw;
 				font-size: var(--f_xl);
 			}
 			form {
-				height: 45vh;
+				top: 45vh;
+				left: 40vw;
+				width: 40vw;
 				h2 {
+					padding: 20% 20% 5% 5%;
 					font-size: var(--f_lg);
 				}
 
-				p {
-					font-size: var(--f_m);
-				}
-
-				input {
-					font-size: var(--f_m);
-				}
-
+				p,
+				input,
 				button {
 					font-size: var(--f_m);
+				}
+
+				input,
+				button {
+					left: 20vw;
+					width: 15vw;
 				}
 			}
 		}
 
 		.grid {
 			margin: 10vh 10vw;
+			grid-template-columns: 1fr 1fr 1fr;
 
 			.card {
 				svg {
+					width: 5vw;
 					margin: 1vh 35%;
 				}
 
@@ -466,18 +481,39 @@
 
 		.text_Block {
 			margin: 1.5vh 0vw;
+
+			.img_Half {
+				margin: 5vh 0;
+				img {
+					width: 40vw;
+					margin-bottom: 5vh;
+				}
+			}
+			.overLay {
+				right: 1vw;
+				margin: -100vh 5vw 0 0;
+				width: 50vw;
+
+				p {
+					font-size: var(--f_lg);
+				}
+
+				a {
+					font-size: var(--f_m);
+				}
+			}
 		}
 
-		.overLay {
-			right: 1vw;
-			margin-top: -95vh;
+		.alt_Color {
+			color: var(--back_Main);
+			background: var(--back_Alt);
+			height: fit-content;
+			margin-top: 60vh;
+			margin-left: 0;
+			margin-bottom: 0;
 
-			p {
-				font-size: var(--font);
-			}
-
-			a {
-				font-size: var(--f_m);
+			.text_Box {
+				margin: 10% 10% 0 10%;
 			}
 		}
 	}
