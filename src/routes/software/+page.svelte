@@ -425,7 +425,7 @@
 	}
 
 	.requirements-table {
-		width: 50vw;
+		width: 60vw;
 		border-collapse: collapse;
 		margin: 5vh 0 5vh 5vw;
 		background: var(--back_Main);
@@ -439,6 +439,7 @@
 
 		th,
 		td {
+			width: 20vw;
 			border: 1px solid var(--text_Alt);
 			padding: 3px;
 		}
@@ -451,7 +452,7 @@
 		td {
 			padding: 0 5%;
 			svg {
-				margin: 0 5vw 0 10vw;
+				margin: 0 0 0 5vw;
 			}
 		}
 

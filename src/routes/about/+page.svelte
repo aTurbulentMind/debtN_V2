@@ -203,11 +203,19 @@
 		}
 	}
 
+	h2 {
+		margin-top: 20vh;
+	}
+
 	workforce {
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 1%;
 		margin-bottom: 25vh;
+
+		.text_Box {
+			margin-left: 10vw;
+		}
 
 		.img_Face {
 			img {
