@@ -475,8 +475,8 @@
 		}
 
 		.requirements-table {
-			width: 50vw;
-			margin: 10vh 25vw;
+			width: 60vw;
+			margin: 10vh 20vw;
 			border-collapse: collapse;
 
 			caption {
@@ -489,11 +489,10 @@
 			th,
 			td {
 				border: 1px solid var(--text_Alt);
-				padding: 8px;
+				padding: 8px 0;
 			}
 
 			th {
-				background-color: var(--back_Alt);
 				color: var(--back_Main);
 			}
 

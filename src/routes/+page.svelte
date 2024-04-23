@@ -269,7 +269,7 @@
 	}
 
 	.overLay {
-		margin: -120vh 0 0 0;
+		margin: -120vh 0 20vh 0;
 		a {
 			font-size: var(--f_lg);
 			margin-bottom: 25vh;
@@ -499,7 +499,8 @@
 				}
 
 				a {
-					font-size: var(--f_m);
+					font-size: var(--f_lg);
+					margin-left: -30vw;
 				}
 			}
 		}

@@ -265,6 +265,10 @@
 			}
 		}
 
+		h2 {
+			margin-top: 50vh;
+		}
+
 		workforce {
 			margin-top: 50vh;
 			.img_Face {
